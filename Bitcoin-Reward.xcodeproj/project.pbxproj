@@ -33,6 +33,13 @@
 		8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73F19C41A16002B8428 /* YQURLRequestSerialization.m */; };
 		8D92C74B19C41A16002B8428 /* YQURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C74119C41A16002B8428 /* YQURLResponseSerialization.m */; };
 		8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C74319C41A16002B8428 /* YQURLSessionManager.m */; };
+		8D92C75019C46A1A002B8428 /* YQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C74F19C46A1A002B8428 /* YQLabel.m */; };
+		8D92C77C19C46A22002B8428 /* YQParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C76719C46A22002B8428 /* YQParse.m */; };
+		8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C76A19C46A22002B8428 /* YQParseImgaeView.m */; };
+		8D92C77E19C46A22002B8428 /* YQParseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C76C19C46A22002B8428 /* YQParseObject.m */; };
+		8D92C77F19C46A22002B8428 /* YQParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C76E19C46A22002B8428 /* YQParseQuery.m */; };
+		8D92C78019C46A22002B8428 /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77019C46A22002B8428 /* YQParseRequestOperationManager.m */; };
+		8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77219C46A22002B8428 /* YQParseUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,21 @@
 		8D92C74119C41A16002B8428 /* YQURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLResponseSerialization.m; sourceTree = "<group>"; };
 		8D92C74219C41A16002B8428 /* YQURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLSessionManager.h; sourceTree = "<group>"; };
 		8D92C74319C41A16002B8428 /* YQURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLSessionManager.m; sourceTree = "<group>"; };
+		8D92C74E19C46A1A002B8428 /* YQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLabel.h; sourceTree = "<group>"; };
+		8D92C74F19C46A1A002B8428 /* YQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLabel.m; sourceTree = "<group>"; };
+		8D92C76619C46A22002B8428 /* YQParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParse.h; sourceTree = "<group>"; };
+		8D92C76719C46A22002B8428 /* YQParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParse.m; sourceTree = "<group>"; };
+		8D92C76819C46A22002B8428 /* YQParseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseConstants.h; sourceTree = "<group>"; };
+		8D92C76919C46A22002B8428 /* YQParseImgaeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseImgaeView.h; sourceTree = "<group>"; };
+		8D92C76A19C46A22002B8428 /* YQParseImgaeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseImgaeView.m; sourceTree = "<group>"; };
+		8D92C76B19C46A22002B8428 /* YQParseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseObject.h; sourceTree = "<group>"; };
+		8D92C76C19C46A22002B8428 /* YQParseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseObject.m; sourceTree = "<group>"; };
+		8D92C76D19C46A22002B8428 /* YQParseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseQuery.h; sourceTree = "<group>"; };
+		8D92C76E19C46A22002B8428 /* YQParseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseQuery.m; sourceTree = "<group>"; };
+		8D92C76F19C46A22002B8428 /* YQParseRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseRequestOperationManager.h; sourceTree = "<group>"; };
+		8D92C77019C46A22002B8428 /* YQParseRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseRequestOperationManager.m; sourceTree = "<group>"; };
+		8D92C77119C46A22002B8428 /* YQParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQParseUser.h; sourceTree = "<group>"; };
+		8D92C77219C46A22002B8428 /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +215,8 @@
 		8D92C72419C419C4002B8428 /* BitcoinRewarding */ = {
 			isa = PBXGroup;
 			children = (
+				8D92C75119C46A22002B8428 /* YQParse */,
+				8D92C74D19C46A1A002B8428 /* YQLabel */,
 				8D92C73019C41A16002B8428 /* YQNetworking */,
 				8D92C72C19C419FA002B8428 /* YQButton */,
 				8D92C72519C419DD002B8428 /* YQPopoverController */,
@@ -244,6 +268,35 @@
 				8D92C74319C41A16002B8428 /* YQURLSessionManager.m */,
 			);
 			path = YQNetworking;
+			sourceTree = "<group>";
+		};
+		8D92C74D19C46A1A002B8428 /* YQLabel */ = {
+			isa = PBXGroup;
+			children = (
+				8D92C74E19C46A1A002B8428 /* YQLabel.h */,
+				8D92C74F19C46A1A002B8428 /* YQLabel.m */,
+			);
+			path = YQLabel;
+			sourceTree = "<group>";
+		};
+		8D92C75119C46A22002B8428 /* YQParse */ = {
+			isa = PBXGroup;
+			children = (
+				8D92C76619C46A22002B8428 /* YQParse.h */,
+				8D92C76719C46A22002B8428 /* YQParse.m */,
+				8D92C76819C46A22002B8428 /* YQParseConstants.h */,
+				8D92C76919C46A22002B8428 /* YQParseImgaeView.h */,
+				8D92C76A19C46A22002B8428 /* YQParseImgaeView.m */,
+				8D92C76B19C46A22002B8428 /* YQParseObject.h */,
+				8D92C76C19C46A22002B8428 /* YQParseObject.m */,
+				8D92C76D19C46A22002B8428 /* YQParseQuery.h */,
+				8D92C76E19C46A22002B8428 /* YQParseQuery.m */,
+				8D92C76F19C46A22002B8428 /* YQParseRequestOperationManager.h */,
+				8D92C77019C46A22002B8428 /* YQParseRequestOperationManager.m */,
+				8D92C77119C46A22002B8428 /* YQParseUser.h */,
+				8D92C77219C46A22002B8428 /* YQParseUser.m */,
+			);
+			path = YQParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,19 +398,26 @@
 			files = (
 				8D92C74419C41A16002B8428 /* YQHTTPRequestOperation.m in Sources */,
 				8D92C74519C41A16002B8428 /* YQHTTPRequestOperationManager.m in Sources */,
+				8D92C77F19C46A22002B8428 /* YQParseQuery.m in Sources */,
+				8D92C78019C46A22002B8428 /* YQParseRequestOperationManager.m in Sources */,
 				8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */,
+				8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */,
 				8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */,
+				8D92C77E19C46A22002B8428 /* YQParseObject.m in Sources */,
 				8D92C74919C41A16002B8428 /* YQURLConnectionOperation.m in Sources */,
 				8D92C74819C41A16002B8428 /* YQSecurityPolicy.m in Sources */,
 				8D92C72F19C419FA002B8428 /* YQButton.m in Sources */,
 				8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */,
+				8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */,
 				8D92C70619C418EA002B8428 /* ViewController.m in Sources */,
 				8D92C72A19C419DD002B8428 /* YQPopoverController.m in Sources */,
 				8D92C74619C41A16002B8428 /* YQHTTPSessionManager.m in Sources */,
 				8D92C74719C41A16002B8428 /* YQNetworkReachabilityManager.m in Sources */,
 				8D92C70019C418EA002B8428 /* AppDelegate.m in Sources */,
 				8D92C6FC19C418EA002B8428 /* main.m in Sources */,
+				8D92C75019C46A1A002B8428 /* YQLabel.m in Sources */,
 				8D92C74B19C41A16002B8428 /* YQURLResponseSerialization.m in Sources */,
+				8D92C77C19C46A22002B8428 /* YQParse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +622,7 @@
 				8D92C72019C418EA002B8428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D92C72119C418EA002B8428 /* Build configuration list for PBXNativeTarget "Bitcoin-RewardTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +631,7 @@
 				8D92C72319C418EA002B8428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
