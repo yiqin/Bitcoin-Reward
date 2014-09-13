@@ -104,9 +104,6 @@
     NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
     
     if ([BRCoinbase isAuthenticated]) {
-        
-        NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
-        
         //        [self.account getAccountChanges:^(NSDictionary *result, NSError *error) {
         //            NSLog(@"%@", result);
         //        }];
@@ -153,7 +150,6 @@
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
         }
-        
         
     }];
     
