@@ -24,9 +24,14 @@
     if (self) {
         self.requestSerializer = [YQJSONRequestSerializer serializer];
         self.responseSerializer = [YQJSONResponseSerializer serializer];
-		
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		
+        NSString *apiKey = @"d3OFRimpax4xe06O";
+        NSString *apiSecret = @"JPT8loHR857nFhktLERws8pJ8cGJHbpD";
+        
+        [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
+        [self.requestSerializer setValue:apiSecret forKey:@"ACCESS_SIGNATURE"];
+        
     }
     return self;
 }
