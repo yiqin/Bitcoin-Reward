@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.m
 //  Bitcoin-Reward
 //
@@ -23,9 +23,6 @@
     NSString *path = @"https://coinbase.com/api/v1/transactions";
     
     BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager managerWithURL:path];
-    
-    // NSString *path = @"https://coinbase.com/api/v1/prices/spot_rate";
-    
     
     NSDictionary *parameters = nil;
     

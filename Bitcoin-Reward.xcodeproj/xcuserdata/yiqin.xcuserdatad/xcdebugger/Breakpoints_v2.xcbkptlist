@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bitcoin-Reward/AppDelegate.m"
-            timestampString = "432314317.09904"
+            timestampString = "432314705.698472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
             <Locations>
@@ -25,11 +25,11 @@
                   symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
                   moduleName = "Bitcoin-Reward"
                   urlString = "file:///Users/yiqin/Desktop/Bitcoin-Reward/Bitcoin-Reward/AppDelegate.m"
-                  timestampString = "432314317.11315"
+                  timestampString = "432314705.714362"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "74">
                </Location>
                <Location
@@ -39,11 +39,11 @@
                   symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke_2"
                   moduleName = "Bitcoin-Reward"
                   urlString = "file:///Users/yiqin/Desktop/Bitcoin-Reward/Bitcoin-Reward/AppDelegate.m"
-                  timestampString = "432314317.113437"
+                  timestampString = "432314705.714721"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "58">
                </Location>
             </Locations>

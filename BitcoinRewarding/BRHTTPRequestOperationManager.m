@@ -19,8 +19,8 @@
 
 + (instancetype)managerWithURL:(NSString *)url
 {
-    
-    return [[self alloc] initWithBaseURL:nil];
+    NSURL *nsurl = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    return [[self alloc] initWithBaseURL:nsurl];
 }
 
 - (instancetype)init {
@@ -35,30 +35,25 @@
         self.responseSerializer = [YQJSONResponseSerializer serializer];
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		
-        // url = @"https://coinbase.com/api/v1/transactions";
-        
+        // Wallet2 api key and api secret
         NSString *apiKey = @"PISZZNEQqmR24CwH";
         NSString *apiSecret = @"pTAwqiBeDfkKE3XjpY77fll7howufZ7o";
         NSNumber *currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]*1000];
         NSString *nonce =[ NSString stringWithFormat:@"%i", [currentTime integerValue]];
-        
         
         // 1
         [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
         
         NSString *body = nil;
         //2
-        NSString *message = [NSString stringWithFormat:@"%@%@",nonce,@"https://coinbase.com/api/v1/transactions"];
+        NSString *message = [NSString stringWithFormat:@"%@%@",nonce,[url absoluteString]];
         
         
         NSString *signature = [self hmac:message withKey:apiSecret];
-        
         [self.requestSerializer setValue:signature forHTTPHeaderField:@"ACCESS_SIGNATURE"];
         
         
-        
         // 3
-        
         [self.requestSerializer setValue:nonce forHTTPHeaderField:@"ACCESS_NONCE"];
     }
     return self;
@@ -83,7 +78,6 @@
     }
     
     return HMAC;
-    
 }
 
 @end
