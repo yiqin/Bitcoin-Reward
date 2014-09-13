@@ -20,6 +20,7 @@
     //
     // This is a test
     //
+    /*
     NSString *path = @"https://coinbase.com/api/v1/account_changes";
     
     BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager managerWithURL:path];
@@ -34,28 +35,40 @@
         NSLog(@"Failure");
         
     }];
+    */
     
     
-    /*
+    
     // Now let's send bitcoin from Wallet2 to Wallet1
-    NSString *path1 = @"https://coinbase.com/api/v1/transactions/send_money";
+    
+    NSString *path1 = @"https://coinbase.com/api/v1/buttons";
     BRHTTPRequestOperationManager *manager1 = [BRHTTPRequestOperationManager managerWithURL:path1];
     
-    NSDictionary *transaction = @{@"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
-                                  @"amount":@"0.00001",
-                                  @"notes":@"Send transaction is from iOS project."};
     
-    NSDictionary *parameters1 = @{@"transaction": transaction};
+    NSDictionary *params = @{@"transaction" : @{
+                                     @"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
+                                     @"amount": @0.01,
+                                     @"notes": @"Send."
+                                     }};
     
-    [manager1 POST:path1 parameters:parameters1 success:^(YQHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary *params1 = @{@"button" : @{
+                                      @"name": @"test",
+                                      @"price_string": @"1.23",
+                                      @"price_currency_iso": @"USD",
+                                      @"variable_price":@"1",
+                                      }};
+    
+    
+    [manager1 POST:path1 parameters:params1 success:^(YQHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Success, send money request.");
+        
         
     } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failure");
         
         
     }];
-    */
+    
     
     return YES;
 }

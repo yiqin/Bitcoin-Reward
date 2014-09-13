@@ -33,8 +33,6 @@
     if (self) {
         self.requestSerializer = [YQJSONRequestSerializer serializer];
         self.responseSerializer = [YQJSONResponseSerializer serializer];
-        
-        //  
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		
         // Wallet2 api key and api secret
@@ -48,17 +46,30 @@
         
         
         
+        
         // parameters are a part of message.
-        NSDictionary *transaction = @{@"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
-                                      @"amount":@"0.00001",
-                                      @"notes":@"Send transaction is from iOS project."};
+        NSDictionary *params = @{@"transaction" : @{
+                                         @"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
+                                         @"amount": @0.01,
+                                         @"notes": @"Send."
+                                         }};
         
-        NSString *tempbody = [NSString stringWithFormat:@"%@", transaction];
+        NSString *temp = [NSString stringWithFormat:@"%@", params];
         
-        NSDictionary *temptransaction = @{@"transaction": tempbody};
+        NSString *paramsString = @"transaction[to]=15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz&transaction[amount]=0.01&transaction[notes]=Send";
+        // https://coinbase.com/api/v1/buttonsbutton[name]=test&button[price_string]=1.23&button[price_currency_iso]=USD&button[variable_price]=1
+        
+        NSDictionary *params1 = @{@"button" : @{
+                                          @"name": @"test",
+                                          @"price_string": @"1.23",
+                                          @"price_currency_iso": @"USD",
+                                          @"variable_price":@"1",
+                                          }};
+        
+        NSString *params1String = @"button[name]=test&button[price_string]=1.23&button[price_currency_iso]=USD&button[variable_price]=1";
         
         //2
-        NSString *message = [NSString stringWithFormat:@"%@%@",nonce,[url absoluteString]];
+        NSString *message = [NSString stringWithFormat:@"%@%@%@",nonce,[url absoluteString],params1String];
         
         
         
