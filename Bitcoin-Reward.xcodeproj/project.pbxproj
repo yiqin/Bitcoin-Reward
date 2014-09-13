@@ -41,6 +41,7 @@
 		8D92C78019C46A22002B8428 /* YQParseRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77019C46A22002B8428 /* YQParseRequestOperationManager.m */; };
 		8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77219C46A22002B8428 /* YQParseUser.m */; };
 		8D92C78419C46B20002B8428 /* BitcoinRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78319C46B20002B8428 /* BitcoinRewarding.m */; };
+		8D92C78719C4720A002B8428 /* BRHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		8D92C77219C46A22002B8428 /* YQParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQParseUser.m; sourceTree = "<group>"; };
 		8D92C78219C46B20002B8428 /* BitcoinRewarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitcoinRewarding.h; sourceTree = "<group>"; };
 		8D92C78319C46B20002B8428 /* BitcoinRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitcoinRewarding.m; sourceTree = "<group>"; };
+		8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 				8D92C72519C419DD002B8428 /* YQPopoverController */,
 				8D92C78219C46B20002B8428 /* BitcoinRewarding.h */,
 				8D92C78319C46B20002B8428 /* BitcoinRewarding.m */,
+				8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */,
+				8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */,
 			);
 			path = BitcoinRewarding;
 			sourceTree = SOURCE_ROOT;
@@ -404,6 +409,7 @@
 				8D92C74419C41A16002B8428 /* YQHTTPRequestOperation.m in Sources */,
 				8D92C74519C41A16002B8428 /* YQHTTPRequestOperationManager.m in Sources */,
 				8D92C77F19C46A22002B8428 /* YQParseQuery.m in Sources */,
+				8D92C78719C4720A002B8428 /* BRHTTPRequestOperationManager.m in Sources */,
 				8D92C78019C46A22002B8428 /* YQParseRequestOperationManager.m in Sources */,
 				8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */,
 				8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */,

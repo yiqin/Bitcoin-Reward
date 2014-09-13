@@ -8,11 +8,33 @@
 
 #import "AppDelegate.h"
 
+#import "BRHTTPRequestOperationManager.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+    BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager manager];
+        
+    NSString *path = @"https://coinbase.com/api/v1/prices/spot_rate";
+    NSDictionary *parameters = nil;
+    
+    [manage GET:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        
+    } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
+        
+        
+    }];
+    
+    
+    
+    
+    
     return YES;
 }
 							
