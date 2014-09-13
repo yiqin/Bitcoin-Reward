@@ -1,9 +1,9 @@
 //
 //  CBAccount.m
-//  Handshake
+//  Bitcoin-Reward
 //
-//  Created by Josh Beal on 12/10/13.
-//  Copyright (c) 2013 Handshake. All rights reserved.
+//  Created by yiqin on 9/13/14.
+//  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
 #import "CBAccount.h"
