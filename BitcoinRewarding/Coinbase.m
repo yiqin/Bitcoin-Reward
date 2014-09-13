@@ -52,7 +52,7 @@ static NSString *permissionsList;
     // Manually input
     // fc265623f340091db47f7b5e6b1c09c11d8d9cff81ba3bbbf6c7a7b1c3d1a1f8
     
-    [[NSUserDefaults standardUserDefaults] setObject:@"fc265623f340091db47f7b5e6b1c09c11d8d9cff81ba3bbbf6c7a7b1c3d1a1f8" forKey:@"authCode"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"1674219aa0bbeb97fd51621937164bb91f0db8f07e27acce754921d5fc337929" forKey:@"authCode"];
     
     loginBlock = handler;
     permissionsList = @"all";
