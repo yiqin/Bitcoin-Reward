@@ -35,7 +35,7 @@
         self.responseSerializer = [YQJSONResponseSerializer serializer];
         
         //  
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		
         // Wallet2 api key and api secret
         NSString *apiKey = @"PISZZNEQqmR24CwH";
@@ -46,6 +46,9 @@
         // 1
         [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
         
+        
+        
+        // parameters are a part of message.
         NSDictionary *transaction = @{@"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
                                       @"amount":@"0.00001",
                                       @"notes":@"Send transaction is from iOS project."};
@@ -55,7 +58,9 @@
         NSDictionary *temptransaction = @{@"transaction": tempbody};
         
         //2
-        NSString *message = [NSString stringWithFormat:@"%@%@%@",nonce,[url absoluteString],[NSString stringWithFormat:@"%@", temptransaction]];
+        NSString *message = [NSString stringWithFormat:@"%@%@",nonce,[url absoluteString]];
+        
+        
         
         
         NSString *signature = [self hmac:message withKey:apiSecret];

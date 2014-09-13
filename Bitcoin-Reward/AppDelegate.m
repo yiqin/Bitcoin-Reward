@@ -20,8 +20,7 @@
     //
     // This is a test
     //
-    /*
-    NSString *path = @"https://coinbase.com/api/v1/transactions";
+    NSString *path = @"https://coinbase.com/api/v1/account_changes";
     
     BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager managerWithURL:path];
     
@@ -35,9 +34,9 @@
         NSLog(@"Failure");
         
     }];
-    */
     
     
+    /*
     // Now let's send bitcoin from Wallet2 to Wallet1
     NSString *path1 = @"https://coinbase.com/api/v1/transactions/send_money";
     BRHTTPRequestOperationManager *manager1 = [BRHTTPRequestOperationManager managerWithURL:path1];
@@ -56,7 +55,7 @@
         
         
     }];
-    
+    */
     
     return YES;
 }
