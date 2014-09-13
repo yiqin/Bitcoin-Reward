@@ -21,6 +21,18 @@
 		8D92C71119C418EA002B8428 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D92C6F319C418EA002B8428 /* UIKit.framework */; };
 		8D92C71919C418EA002B8428 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C71719C418EA002B8428 /* InfoPlist.strings */; };
 		8D92C71B19C418EA002B8428 /* Bitcoin_RewardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C71A19C418EA002B8428 /* Bitcoin_RewardTests.m */; };
+		8D92C72A19C419DD002B8428 /* YQPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C72719C419DD002B8428 /* YQPopoverController.m */; };
+		8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C72919C419DD002B8428 /* YQStoryboardPopoverSegue.m */; };
+		8D92C72F19C419FA002B8428 /* YQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C72E19C419FA002B8428 /* YQButton.m */; };
+		8D92C74419C41A16002B8428 /* YQHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73219C41A16002B8428 /* YQHTTPRequestOperation.m */; };
+		8D92C74519C41A16002B8428 /* YQHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73419C41A16002B8428 /* YQHTTPRequestOperationManager.m */; };
+		8D92C74619C41A16002B8428 /* YQHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73619C41A16002B8428 /* YQHTTPSessionManager.m */; };
+		8D92C74719C41A16002B8428 /* YQNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73919C41A16002B8428 /* YQNetworkReachabilityManager.m */; };
+		8D92C74819C41A16002B8428 /* YQSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73B19C41A16002B8428 /* YQSecurityPolicy.m */; };
+		8D92C74919C41A16002B8428 /* YQURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73D19C41A16002B8428 /* YQURLConnectionOperation.m */; };
+		8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C73F19C41A16002B8428 /* YQURLRequestSerialization.m */; };
+		8D92C74B19C41A16002B8428 /* YQURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C74119C41A16002B8428 /* YQURLResponseSerialization.m */; };
+		8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C74319C41A16002B8428 /* YQURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,31 @@
 		8D92C71619C418EA002B8428 /* Bitcoin-RewardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bitcoin-RewardTests-Info.plist"; sourceTree = "<group>"; };
 		8D92C71819C418EA002B8428 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D92C71A19C418EA002B8428 /* Bitcoin_RewardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bitcoin_RewardTests.m; sourceTree = "<group>"; };
+		8D92C72619C419DD002B8428 /* YQPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQPopoverController.h; sourceTree = "<group>"; };
+		8D92C72719C419DD002B8428 /* YQPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQPopoverController.m; sourceTree = "<group>"; };
+		8D92C72819C419DD002B8428 /* YQStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		8D92C72919C419DD002B8428 /* YQStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		8D92C72D19C419FA002B8428 /* YQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQButton.h; sourceTree = "<group>"; };
+		8D92C72E19C419FA002B8428 /* YQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQButton.m; sourceTree = "<group>"; };
+		8D92C73119C41A16002B8428 /* YQHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8D92C73219C41A16002B8428 /* YQHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8D92C73319C41A16002B8428 /* YQHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8D92C73419C41A16002B8428 /* YQHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8D92C73519C41A16002B8428 /* YQHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQHTTPSessionManager.h; sourceTree = "<group>"; };
+		8D92C73619C41A16002B8428 /* YQHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQHTTPSessionManager.m; sourceTree = "<group>"; };
+		8D92C73719C41A16002B8428 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
+		8D92C73819C41A16002B8428 /* YQNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8D92C73919C41A16002B8428 /* YQNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		8D92C73A19C41A16002B8428 /* YQSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSecurityPolicy.h; sourceTree = "<group>"; };
+		8D92C73B19C41A16002B8428 /* YQSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQSecurityPolicy.m; sourceTree = "<group>"; };
+		8D92C73C19C41A16002B8428 /* YQURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLConnectionOperation.h; sourceTree = "<group>"; };
+		8D92C73D19C41A16002B8428 /* YQURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLConnectionOperation.m; sourceTree = "<group>"; };
+		8D92C73E19C41A16002B8428 /* YQURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLRequestSerialization.h; sourceTree = "<group>"; };
+		8D92C73F19C41A16002B8428 /* YQURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLRequestSerialization.m; sourceTree = "<group>"; };
+		8D92C74019C41A16002B8428 /* YQURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLResponseSerialization.h; sourceTree = "<group>"; };
+		8D92C74119C41A16002B8428 /* YQURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLResponseSerialization.m; sourceTree = "<group>"; };
+		8D92C74219C41A16002B8428 /* YQURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQURLSessionManager.h; sourceTree = "<group>"; };
+		8D92C74319C41A16002B8428 /* YQURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQURLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +154,7 @@
 				8D92C70119C418EA002B8428 /* Main.storyboard */,
 				8D92C70419C418EA002B8428 /* ViewController.h */,
 				8D92C70519C418EA002B8428 /* ViewController.m */,
-<<<<<<< HEAD
 				8D92C72419C419C4002B8428 /* BitcoinRewarding */,
-				8D92C72519C419DD002B8428 /* YQPopoverController */,
-=======
->>>>>>> parent of b6ebf4b... Add YQNetworking, YQButton, and YQPopoverController.
 				8D92C70719C418EA002B8428 /* Images.xcassets */,
 				8D92C6F619C418EA002B8428 /* Supporting Files */,
 			);
@@ -157,12 +190,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		8D92C72419C419C4002B8428 /* BitcoinRewarding */ = {
 			isa = PBXGroup;
 			children = (
 				8D92C73019C41A16002B8428 /* YQNetworking */,
 				8D92C72C19C419FA002B8428 /* YQButton */,
+				8D92C72519C419DD002B8428 /* YQPopoverController */,
 			);
 			path = BitcoinRewarding;
 			sourceTree = SOURCE_ROOT;
@@ -175,8 +208,7 @@
 				8D92C72819C419DD002B8428 /* YQStoryboardPopoverSegue.h */,
 				8D92C72919C419DD002B8428 /* YQStoryboardPopoverSegue.m */,
 			);
-			name = YQPopoverController;
-			path = ../BitcoinRewarding/YQPopoverController;
+			path = YQPopoverController;
 			sourceTree = "<group>";
 		};
 		8D92C72C19C419FA002B8428 /* YQButton */ = {
@@ -214,8 +246,6 @@
 			path = YQNetworking;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> parent of b6ebf4b... Add YQNetworking, YQButton, and YQPopoverController.
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,9 +343,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D92C74419C41A16002B8428 /* YQHTTPRequestOperation.m in Sources */,
+				8D92C74519C41A16002B8428 /* YQHTTPRequestOperationManager.m in Sources */,
+				8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */,
+				8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */,
+				8D92C74919C41A16002B8428 /* YQURLConnectionOperation.m in Sources */,
+				8D92C74819C41A16002B8428 /* YQSecurityPolicy.m in Sources */,
+				8D92C72F19C419FA002B8428 /* YQButton.m in Sources */,
+				8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */,
 				8D92C70619C418EA002B8428 /* ViewController.m in Sources */,
+				8D92C72A19C419DD002B8428 /* YQPopoverController.m in Sources */,
+				8D92C74619C41A16002B8428 /* YQHTTPSessionManager.m in Sources */,
+				8D92C74719C41A16002B8428 /* YQNetworkReachabilityManager.m in Sources */,
 				8D92C70019C418EA002B8428 /* AppDelegate.m in Sources */,
 				8D92C6FC19C418EA002B8428 /* main.m in Sources */,
+				8D92C74B19C41A16002B8428 /* YQURLResponseSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
