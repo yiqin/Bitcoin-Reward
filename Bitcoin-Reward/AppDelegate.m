@@ -17,22 +17,29 @@
     // Override point for customization after application launch.
     
     
-    BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager manager];
-        
+    //
+    // This is a test
+    //
+    NSString *path = @"https://coinbase.com/api/v1/transactions";
+    
+    BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager managerWithURL:path];
+    
     // NSString *path = @"https://coinbase.com/api/v1/prices/spot_rate";
     
-    NSString *path = @"https://coinbase.com/api/v1/transactions";
+    
     NSDictionary *parameters = nil;
     
     [manage GET:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
-        
+        NSLog(@"Success");
         
         
     } failure:^(YQHTTPRequestOperation *operation, NSError *error) {
-        
+        NSLog(@"Failure");
         
     }];
     
+    
+
     
     
     

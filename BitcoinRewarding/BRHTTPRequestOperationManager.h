@@ -10,4 +10,6 @@
 
 @interface BRHTTPRequestOperationManager : YQHTTPRequestOperationManager
 
++ (instancetype)managerWithURL:(NSString *)url;
+
 @end

@@ -17,6 +17,12 @@
     return [[self alloc] initWithBaseURL:nil];
 }
 
++ (instancetype)managerWithURL:(NSString *)url
+{
+    
+    return [[self alloc] initWithBaseURL:nil];
+}
+
 - (instancetype)init {
     return [self initWithBaseURL:nil];
 }
@@ -29,8 +35,10 @@
         self.responseSerializer = [YQJSONResponseSerializer serializer];
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		
-        NSString *apiKey = @"d3OFRimpax4xe06O";
-        NSString *apiSecret = @"JPT8loHR857nFhktLERws8pJ8cGJHbpD";
+        // url = @"https://coinbase.com/api/v1/transactions";
+        
+        NSString *apiKey = @"PISZZNEQqmR24CwH";
+        NSString *apiSecret = @"pTAwqiBeDfkKE3XjpY77fll7howufZ7o";
         NSNumber *currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]*1000];
         NSString *nonce =[ NSString stringWithFormat:@"%i", [currentTime integerValue]];
         
@@ -40,7 +48,7 @@
         
         NSString *body = nil;
         //2
-        NSString *message = [NSString stringWithFormat:@"%@%@%@",nonce,url,body];
+        NSString *message = [NSString stringWithFormat:@"%@%@",nonce,@"https://coinbase.com/api/v1/transactions"];
         
         
         NSString *signature = [self hmac:message withKey:apiSecret];
