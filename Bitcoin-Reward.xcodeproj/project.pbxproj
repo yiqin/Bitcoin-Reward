@@ -13,7 +13,6 @@
 		8D92C6FA19C418EA002B8428 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C6F819C418EA002B8428 /* InfoPlist.strings */; };
 		8D92C6FC19C418EA002B8428 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C6FB19C418EA002B8428 /* main.m */; };
 		8D92C70019C418EA002B8428 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C6FF19C418EA002B8428 /* AppDelegate.m */; };
-		8D92C70319C418EA002B8428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C70119C418EA002B8428 /* Main.storyboard */; };
 		8D92C70619C418EA002B8428 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C70519C418EA002B8428 /* ViewController.m */; };
 		8D92C70819C418EA002B8428 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C70719C418EA002B8428 /* Images.xcassets */; };
 		8D92C70F19C418EA002B8428 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D92C70E19C418EA002B8428 /* XCTest.framework */; };
@@ -42,6 +41,11 @@
 		8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77219C46A22002B8428 /* YQParseUser.m */; };
 		8D92C78419C46B20002B8428 /* BitcoinRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78319C46B20002B8428 /* BitcoinRewarding.m */; };
 		8D92C78719C4720A002B8428 /* BRHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */; };
+		8D92C7A219C4EF91002B8428 /* CBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79919C4EF90002B8428 /* CBAccount.m */; };
+		8D92C7A319C4EF91002B8428 /* CBExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79B19C4EF91002B8428 /* CBExchange.m */; };
+		8D92C7A419C4EF91002B8428 /* CBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79D19C4EF91002B8428 /* CBRequest.m */; };
+		8D92C7A519C4EF91002B8428 /* CBTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79F19C4EF91002B8428 /* CBTransaction.m */; };
+		8D92C7A619C4EF91002B8428 /* Coinbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C7A119C4EF91002B8428 /* Coinbase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,6 @@
 		8D92C6FD19C418EA002B8428 /* Bitcoin-Reward-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bitcoin-Reward-Prefix.pch"; sourceTree = "<group>"; };
 		8D92C6FE19C418EA002B8428 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D92C6FF19C418EA002B8428 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D92C70219C418EA002B8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D92C70419C418EA002B8428 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D92C70519C418EA002B8428 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D92C70719C418EA002B8428 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -118,6 +121,16 @@
 		8D92C78319C46B20002B8428 /* BitcoinRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitcoinRewarding.m; sourceTree = "<group>"; };
 		8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHTTPRequestOperationManager.h; sourceTree = "<group>"; };
 		8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8D92C79819C4EF90002B8428 /* CBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccount.h; sourceTree = "<group>"; };
+		8D92C79919C4EF90002B8428 /* CBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccount.m; sourceTree = "<group>"; };
+		8D92C79A19C4EF91002B8428 /* CBExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBExchange.h; sourceTree = "<group>"; };
+		8D92C79B19C4EF91002B8428 /* CBExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBExchange.m; sourceTree = "<group>"; };
+		8D92C79C19C4EF91002B8428 /* CBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequest.h; sourceTree = "<group>"; };
+		8D92C79D19C4EF91002B8428 /* CBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequest.m; sourceTree = "<group>"; };
+		8D92C79E19C4EF91002B8428 /* CBTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTransaction.h; sourceTree = "<group>"; };
+		8D92C79F19C4EF91002B8428 /* CBTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTransaction.m; sourceTree = "<group>"; };
+		8D92C7A019C4EF91002B8428 /* Coinbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coinbase.h; sourceTree = "<group>"; };
+		8D92C7A119C4EF91002B8428 /* Coinbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coinbase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +192,6 @@
 			children = (
 				8D92C6FE19C418EA002B8428 /* AppDelegate.h */,
 				8D92C6FF19C418EA002B8428 /* AppDelegate.m */,
-				8D92C70119C418EA002B8428 /* Main.storyboard */,
 				8D92C70419C418EA002B8428 /* ViewController.h */,
 				8D92C70519C418EA002B8428 /* ViewController.m */,
 				8D92C72419C419C4002B8428 /* BitcoinRewarding */,
@@ -228,6 +240,16 @@
 				8D92C72519C419DD002B8428 /* YQPopoverController */,
 				8D92C78219C46B20002B8428 /* BitcoinRewarding.h */,
 				8D92C78319C46B20002B8428 /* BitcoinRewarding.m */,
+				8D92C79819C4EF90002B8428 /* CBAccount.h */,
+				8D92C79919C4EF90002B8428 /* CBAccount.m */,
+				8D92C79A19C4EF91002B8428 /* CBExchange.h */,
+				8D92C79B19C4EF91002B8428 /* CBExchange.m */,
+				8D92C79C19C4EF91002B8428 /* CBRequest.h */,
+				8D92C79D19C4EF91002B8428 /* CBRequest.m */,
+				8D92C79E19C4EF91002B8428 /* CBTransaction.h */,
+				8D92C79F19C4EF91002B8428 /* CBTransaction.m */,
+				8D92C7A019C4EF91002B8428 /* Coinbase.h */,
+				8D92C7A119C4EF91002B8428 /* Coinbase.m */,
 				8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */,
 				8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */,
 			);
@@ -387,7 +409,6 @@
 			files = (
 				8D92C70819C418EA002B8428 /* Images.xcassets in Resources */,
 				8D92C6FA19C418EA002B8428 /* InfoPlist.strings in Resources */,
-				8D92C70319C418EA002B8428 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,16 +433,21 @@
 				8D92C78719C4720A002B8428 /* BRHTTPRequestOperationManager.m in Sources */,
 				8D92C78019C46A22002B8428 /* YQParseRequestOperationManager.m in Sources */,
 				8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */,
+				8D92C7A619C4EF91002B8428 /* Coinbase.m in Sources */,
+				8D92C7A219C4EF91002B8428 /* CBAccount.m in Sources */,
 				8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */,
 				8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */,
+				8D92C7A519C4EF91002B8428 /* CBTransaction.m in Sources */,
 				8D92C77E19C46A22002B8428 /* YQParseObject.m in Sources */,
 				8D92C74919C41A16002B8428 /* YQURLConnectionOperation.m in Sources */,
 				8D92C74819C41A16002B8428 /* YQSecurityPolicy.m in Sources */,
 				8D92C72F19C419FA002B8428 /* YQButton.m in Sources */,
+				8D92C7A419C4EF91002B8428 /* CBRequest.m in Sources */,
 				8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */,
 				8D92C78419C46B20002B8428 /* BitcoinRewarding.m in Sources */,
 				8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */,
 				8D92C70619C418EA002B8428 /* ViewController.m in Sources */,
+				8D92C7A319C4EF91002B8428 /* CBExchange.m in Sources */,
 				8D92C72A19C419DD002B8428 /* YQPopoverController.m in Sources */,
 				8D92C74619C41A16002B8428 /* YQHTTPSessionManager.m in Sources */,
 				8D92C74719C41A16002B8428 /* YQNetworkReachabilityManager.m in Sources */,
@@ -458,14 +484,6 @@
 				8D92C6F919C418EA002B8428 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8D92C70119C418EA002B8428 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D92C70219C418EA002B8428 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		8D92C71719C418EA002B8428 /* InfoPlist.strings */ = {

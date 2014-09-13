@@ -46,7 +46,7 @@
         
         
         
-        
+        /*
         // parameters are a part of message.
         NSDictionary *params = @{@"transaction" : @{
                                          @"to": @"15KFbJu5C4ZQwdYaK6Ddpy8DpW9xT3vcVz",
@@ -65,7 +65,7 @@
                                           @"price_currency_iso": @"USD",
                                           @"variable_price":@"1",
                                           }};
-        
+        */
         NSString *params1String = @"button[name]=test&button[price_string]=1.23&button[price_currency_iso]=USD&button[variable_price]=1";
         
         //2
