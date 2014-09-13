@@ -18,7 +18,6 @@
 @interface ViewController ()
 @property UIView *headerView;
 @property UILabel *headerLabel;
-@property UIButton *authButton;
 @property UIButton *rightButton;
 @property NSMutableArray *transactions;
 @property UILabel *nameLabel;
@@ -90,12 +89,6 @@
         buttonY = 0;
     }
     
-    self.authButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonY, 70, 50)];
-    [self.authButton setTitle:@"" forState:UIControlStateNormal];
-    self.authButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
-    [self.authButton addTarget:self action:@selector(auth) forControlEvents:UIControlEventTouchUpInside];
-    [self.headerView addSubview:self.authButton];
-    
     self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake(320-70, buttonY, 70, 50)];
     [self.rightButton setTitle:@"Send" forState:UIControlStateNormal];
     self.rightButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
@@ -146,6 +139,8 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
+    
+    // When the view is loaded,
     [self auth];
 }
 
@@ -238,11 +233,9 @@
                         [self.tableView reloadData];
                     }];
                 }];
-                [self.authButton setTitle:@"" forState:UIControlStateNormal];
             }
         }];
     } else {
-        [self.authButton setTitle:@"" forState:UIControlStateNormal];
         [self.headerLabel setText:@"Coinbase Example"];
         self.account = nil;
         [self.photo setImage:[UIImage imageNamed:@"placeholder.jpg"]];
@@ -359,10 +352,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CBTransaction *transaction = [self.transactions objectAtIndex:indexPath.row];
-    if (transaction.hash) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://coinbase.com/network/transactions/%@.json", transaction.hash]]];
-    }
+    
 }
 
 - (void)didReceiveMemoryWarning
