@@ -29,9 +29,20 @@
         NSString *apiKey = @"d3OFRimpax4xe06O";
         NSString *apiSecret = @"JPT8loHR857nFhktLERws8pJ8cGJHbpD";
         
+        // 1
         [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
-        [self.requestSerializer setValue:apiSecret forKey:@"ACCESS_SIGNATURE"];
         
+        
+        //2
+        
+        // [self.requestSerializer setValue:apiSecret forKey:@"ACCESS_SIGNATURE"];
+        
+        
+        
+        // 3
+        NSNumber *currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970] * 1000];
+        NSString *nonce =[ NSString stringWithFormat:@"%i", [currentTime integerValue]];
+        [self.requestSerializer setValue:nonce forHTTPHeaderField:@"ACCESS_NONCE"];
     }
     return self;
 }
