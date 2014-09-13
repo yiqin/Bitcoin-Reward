@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Handshake. All rights reserved.
 //
 
-#import "Coinbase.h"
+#import "BRCoinbase.h"
 #import "CBRequest.h"
 
 NSString *const CB_AUTHCODE_NOTIFICATION_TYPE = @"CB_AUTHCODE_NOTIFICATION";
@@ -18,11 +18,11 @@ static NSString* _clientSecret;
 static LoginHandler loginBlock;
 static NSString *permissionsList;
 
-@interface Coinbase ()
+@interface BRCoinbase ()
 + (void)getAuthCode:(NSString *)scope;
 @end
 
-@implementation Coinbase
+@implementation BRCoinbase
 
 + (BOOL)isAuthenticated {
     return isAuthenticated;
@@ -90,7 +90,7 @@ static NSString *permissionsList;
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"expiryTime"] == nil) {
         YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
         manager.responseSerializer = [YQJSONResponseSerializer serializer];
-        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=authorization_code&code=%@&redirect_uri=%@&client_id=%@&client_secret=%@", authCode, [Coinbase getCallbackUrl], [Coinbase getClientId], [Coinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
+        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=authorization_code&code=%@&redirect_uri=%@&client_id=%@&client_secret=%@", authCode, [BRCoinbase getCallbackUrl], [BRCoinbase getClientId], [BRCoinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
             NSLog(@"%@", JSON);
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -111,7 +111,7 @@ static NSString *permissionsList;
     } else {
         YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
         manager.responseSerializer = [YQJSONResponseSerializer serializer];
-        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=refresh_token&refresh_token=%@&client_id=%@&client_secret=%@", refreshToken, [Coinbase getClientId], [Coinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
+        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=refresh_token&refresh_token=%@&client_id=%@&client_secret=%@", refreshToken, [BRCoinbase getClientId], [BRCoinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
             NSLog(@"%@", JSON);
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -131,7 +131,7 @@ static NSString *permissionsList;
 }
 
 + (void)getAuthCode:(NSString *)scope {
-    [[NSNotificationCenter defaultCenter] postNotificationName:CB_AUTHCODE_NOTIFICATION_TYPE object:nil userInfo:@{CB_AUTHCODE_URL_KEY:[NSURL URLWithString:[NSString stringWithFormat:@"https://coinbase.com/oauth/authorize?response_type=code&client_id=%@&redirect_uri=%@&scope=%@", [Coinbase getClientId], [Coinbase getCallbackUrl], scope]]}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:CB_AUTHCODE_NOTIFICATION_TYPE object:nil userInfo:@{CB_AUTHCODE_URL_KEY:[NSURL URLWithString:[NSString stringWithFormat:@"https://coinbase.com/oauth/authorize?response_type=code&client_id=%@&redirect_uri=%@&scope=%@", [BRCoinbase getClientId], [BRCoinbase getCallbackUrl], scope]]}];
     
     
 }

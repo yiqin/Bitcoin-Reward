@@ -10,7 +10,7 @@
 
 #import "BRHTTPRequestOperationManager.h"
 
-#import "Coinbase.h"
+#import "BRCoinbase.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -82,7 +82,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [Coinbase setClientId:@"6b14b1df3e78c4f307d93a6a4cc27e831f075142b5c54e8948c4183e9f34fb19" clientSecret:@"ede9c978a65caf45fd0cfc46d1075f945f2e7b0dbf860fe65d81aa6e2950fa4d"];
+    [BRCoinbase setClientId:@"6b14b1df3e78c4f307d93a6a4cc27e831f075142b5c54e8948c4183e9f34fb19" clientSecret:@"ede9c978a65caf45fd0cfc46d1075f945f2e7b0dbf860fe65d81aa6e2950fa4d"];
     
     return YES;
 }

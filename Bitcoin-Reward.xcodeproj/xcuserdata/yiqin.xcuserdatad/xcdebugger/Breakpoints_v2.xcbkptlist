@@ -9,7 +9,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitcoinRewarding/Coinbase.m"
+            filePath = "BitcoinRewarding/BRCoinbase.m"
             timestampString = "432340379.683282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

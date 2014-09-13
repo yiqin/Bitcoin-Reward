@@ -7,7 +7,7 @@
 //
 
 #import "CBTransaction.h"
-#import "Coinbase.h"
+#import "BRCoinbase.h"
 
 @implementation CBTransaction
 
@@ -31,7 +31,7 @@
 }
 
 + (void)send:(NSNumber*)amount to:(NSString*)address withNotes:(NSString*)notes withHandler:(TransactionHandler)handler {
-    [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -56,7 +56,7 @@
 }
 
 + (void)request:(NSNumber*)amount from:(NSString*)address withNotes:(NSString*)notes withHandler:(TransactionHandler)handler {
-    [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -83,7 +83,7 @@
 }
 
 + (void)resend:(NSString*)requestId withHandler:(RequestActionHandler)handler {
-    [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
         if (error) {
             handler(NO, error);
         } else {
@@ -104,7 +104,7 @@
 }
 
 + (void)cancel:(NSString*)requestId withHandler:(RequestActionHandler)handler {
-    [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
         if (error) {
             handler(NO, error);
         } else {
@@ -125,7 +125,7 @@
 }
 
 + (void)complete:(NSString*)requestId withHandler:(TransactionHandler)handler {
-    [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {

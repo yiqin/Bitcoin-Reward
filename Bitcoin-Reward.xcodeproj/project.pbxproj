@@ -45,7 +45,7 @@
 		8D92C7A319C4EF91002B8428 /* CBExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79B19C4EF91002B8428 /* CBExchange.m */; };
 		8D92C7A419C4EF91002B8428 /* CBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79D19C4EF91002B8428 /* CBRequest.m */; };
 		8D92C7A519C4EF91002B8428 /* CBTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79F19C4EF91002B8428 /* CBTransaction.m */; };
-		8D92C7A619C4EF91002B8428 /* Coinbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C7A119C4EF91002B8428 /* Coinbase.m */; };
+		8D92C7A619C4EF91002B8428 /* BRCoinbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C7A119C4EF91002B8428 /* BRCoinbase.m */; };
 		8D92C82E19C4F3E9002B8428 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C82C19C4F3E9002B8428 /* NSDate+TimeAgo.m */; };
 		8D92C82F19C4F3E9002B8428 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C82D19C4F3E9002B8428 /* NSDateTimeAgo.bundle */; };
 		8D92C83519C4F3F5002B8428 /* NSData+NSHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C83219C4F3F5002B8428 /* NSData+NSHash.m */; };
@@ -165,8 +165,8 @@
 		8D92C79D19C4EF91002B8428 /* CBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequest.m; sourceTree = "<group>"; };
 		8D92C79E19C4EF91002B8428 /* CBTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTransaction.h; sourceTree = "<group>"; };
 		8D92C79F19C4EF91002B8428 /* CBTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTransaction.m; sourceTree = "<group>"; };
-		8D92C7A019C4EF91002B8428 /* Coinbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coinbase.h; sourceTree = "<group>"; };
-		8D92C7A119C4EF91002B8428 /* Coinbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coinbase.m; sourceTree = "<group>"; };
+		8D92C7A019C4EF91002B8428 /* BRCoinbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCoinbase.h; sourceTree = "<group>"; };
+		8D92C7A119C4EF91002B8428 /* BRCoinbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCoinbase.m; sourceTree = "<group>"; };
 		8D92C82B19C4F3E9002B8428 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
 		8D92C82C19C4F3E9002B8428 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		8D92C82D19C4F3E9002B8428 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
@@ -356,8 +356,8 @@
 				8D92C79D19C4EF91002B8428 /* CBRequest.m */,
 				8D92C79E19C4EF91002B8428 /* CBTransaction.h */,
 				8D92C79F19C4EF91002B8428 /* CBTransaction.m */,
-				8D92C7A019C4EF91002B8428 /* Coinbase.h */,
-				8D92C7A119C4EF91002B8428 /* Coinbase.m */,
+				8D92C7A019C4EF91002B8428 /* BRCoinbase.h */,
+				8D92C7A119C4EF91002B8428 /* BRCoinbase.m */,
 				8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */,
 				8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */,
 				8D92C86E19C4F469002B8428 /* SDWebImage */,
@@ -662,7 +662,7 @@
 				8D92C72B19C419DD002B8428 /* YQStoryboardPopoverSegue.m in Sources */,
 				8D92C86D19C4F40B002B8428 /* UIViewController+SAMAdditions.m in Sources */,
 				8D92C86219C4F40B002B8428 /* NSString+SAMAdditions.m in Sources */,
-				8D92C7A619C4EF91002B8428 /* Coinbase.m in Sources */,
+				8D92C7A619C4EF91002B8428 /* BRCoinbase.m in Sources */,
 				8D92C7A219C4EF91002B8428 /* CBAccount.m in Sources */,
 				8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */,
 				8D92C88E19C4F469002B8428 /* SDWebImageCompat.m in Sources */,

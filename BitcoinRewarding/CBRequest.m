@@ -7,7 +7,7 @@
 //
 
 #import "CBRequest.h"
-#import "Coinbase.h"
+#import "BRCoinbase.h"
 
 @implementation CBRequest
 + (void)authorizedRequest:(CBResponseHandler)handler {
@@ -18,7 +18,7 @@
         
         YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
         manager.responseSerializer = [YQJSONResponseSerializer serializer];
-        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=refresh_token&refresh_token=%@&client_id=%@&client_secret=%@", refreshToken, [Coinbase getClientId], [Coinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
+        [manager POST:[NSString stringWithFormat:@"https://coinbase.com/oauth/token?grant_type=refresh_token&refresh_token=%@&client_id=%@&client_secret=%@", refreshToken, [BRCoinbase getClientId], [BRCoinbase getClientSecret]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
             NSLog(@"%@", JSON);
 
             dispatch_async(dispatch_get_main_queue(), ^{

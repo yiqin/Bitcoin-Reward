@@ -12,7 +12,7 @@
 #import "NSDate+TimeAgo.h"
 #import "SAMCategories.h"
 #import "UIImageView+WebCache.h"
-#import "Coinbase.h"
+#import "BRCoinbase.h"
 #import "CBExchange.h"
 
 @interface ViewController ()
@@ -157,9 +157,9 @@
     
     // NSLog(@"Auth or not", [Coinbase isAuthenticated]);
     
-    NSLog([Coinbase isAuthenticated] ? @"Yes" : @"No");
+    NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
     
-    if ([Coinbase isAuthenticated]) {
+    if ([BRCoinbase isAuthenticated]) {
         //        [self.account getAccountChanges:^(NSDictionary *result, NSError *error) {
         //            NSLog(@"%@", result);
         //        }];
@@ -225,12 +225,12 @@
 - (void)auth
 {
     
-    if (![Coinbase isAuthenticated]) {
-        [Coinbase login:^(NSError *error) {
+    if (![BRCoinbase isAuthenticated]) {
+        [BRCoinbase login:^(NSError *error) {
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                [Coinbase getAccount:^(CBAccount *account, NSError *error) {
+                [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
                     self.account = account;
                     [self.headerLabel setText:self.account.name];
                     [CBExchange getExchangeRates:^(NSDictionary *entries, NSError *error) {

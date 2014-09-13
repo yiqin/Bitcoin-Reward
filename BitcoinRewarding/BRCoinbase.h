@@ -15,7 +15,7 @@ FOUNDATION_EXPORT NSString *const CB_AUTHCODE_URL_KEY;
 typedef void (^AccountHandler)(CBAccount *account, NSError *error);
 typedef void (^LoginHandler)(NSError *error);
 
-@interface Coinbase : NSObject
+@interface BRCoinbase : NSObject
 
 + (BOOL)isAuthenticated;
 
