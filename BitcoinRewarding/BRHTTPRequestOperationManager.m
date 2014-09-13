@@ -8,6 +8,9 @@
 
 #import "BRHTTPRequestOperationManager.h"
 
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonHMAC.h>
+
 @implementation BRHTTPRequestOperationManager
 
 + (instancetype)manager {
@@ -28,24 +31,49 @@
 		
         NSString *apiKey = @"d3OFRimpax4xe06O";
         NSString *apiSecret = @"JPT8loHR857nFhktLERws8pJ8cGJHbpD";
+        NSNumber *currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]*1000];
+        NSString *nonce =[ NSString stringWithFormat:@"%i", [currentTime integerValue]];
+        
         
         // 1
         [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
         
-        
+        NSString *body = @"";
         //2
+        NSString *message = [NSString stringWithFormat:@"%@%@%@",nonce,url,body];
         
-        // [self.requestSerializer setValue:apiSecret forKey:@"ACCESS_SIGNATURE"];
+        
+        NSString *signature = [self hmac:message withKey:apiSecret];
+        
+        [self.requestSerializer setValue:signature forHTTPHeaderField:@"ACCESS_SIGNATURE"];
         
         
         
         // 3
-        NSNumber *currentTime = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970] * 1000];
-        NSString *nonce =[ NSString stringWithFormat:@"%i", [currentTime integerValue]];
+        
         [self.requestSerializer setValue:nonce forHTTPHeaderField:@"ACCESS_NONCE"];
     }
     return self;
 }
 
+- (NSString *)hmac:(NSString *)plaintext withKey:(NSString *)key
+{
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [plaintext cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+    
+    CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMACData = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+    
+    const unsigned char *buffer = (const unsigned char *)[HMACData bytes];
+    NSString *HMAC = [NSMutableString stringWithCapacity:HMACData.length * 2];
+    
+    for (int i = 0; i < HMACData.length; ++i)
+        HMAC = [HMAC stringByAppendingFormat:@"%02lx", (unsigned long)buffer[i]];
+    
+    return HMAC;
+}
 
 @end

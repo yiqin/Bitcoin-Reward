@@ -19,7 +19,9 @@
     
     BRHTTPRequestOperationManager *manage = [BRHTTPRequestOperationManager manager];
         
-    NSString *path = @"https://coinbase.com/api/v1/prices/spot_rate";
+    // NSString *path = @"https://coinbase.com/api/v1/prices/spot_rate";
+    
+    NSString *path = @"https://coinbase.com/api/v1/transactions";
     NSDictionary *parameters = nil;
     
     [manage GET:path parameters:parameters success:^(YQHTTPRequestOperation *operation, id responseObject) {
