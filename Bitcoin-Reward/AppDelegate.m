@@ -41,6 +41,7 @@
     
     // Now let's send bitcoin from Wallet2 to Wallet1
     
+    /*
     NSString *path1 = @"https://coinbase.com/api/v1/buttons";
     BRHTTPRequestOperationManager *manager1 = [BRHTTPRequestOperationManager managerWithURL:path1];
     
@@ -68,7 +69,7 @@
         
         
     }];
-    
+    */
     
     return YES;
 }
