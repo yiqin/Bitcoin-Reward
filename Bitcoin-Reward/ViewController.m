@@ -42,10 +42,6 @@
     return self;
 }
 
-- (IBAction)close:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
