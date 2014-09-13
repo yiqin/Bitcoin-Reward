@@ -142,6 +142,7 @@
 
 - (void)getAuthCode:(NSNotification *)notification
 {
+    NSLog(@"%@",[[notification userInfo] objectForKey:CB_AUTHCODE_URL_KEY]);
     
     [[UIApplication sharedApplication] openURL:[[notification userInfo] objectForKey:CB_AUTHCODE_URL_KEY]];
 }
