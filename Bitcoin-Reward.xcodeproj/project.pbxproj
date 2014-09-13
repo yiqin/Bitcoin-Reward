@@ -155,6 +155,7 @@
 				8D92C70419C418EA002B8428 /* ViewController.h */,
 				8D92C70519C418EA002B8428 /* ViewController.m */,
 				8D92C72419C419C4002B8428 /* BitcoinRewarding */,
+				8D92C72519C419DD002B8428 /* YQPopoverController */,
 				8D92C70719C418EA002B8428 /* Images.xcassets */,
 				8D92C6F619C418EA002B8428 /* Supporting Files */,
 			);
@@ -195,7 +196,6 @@
 			children = (
 				8D92C73019C41A16002B8428 /* YQNetworking */,
 				8D92C72C19C419FA002B8428 /* YQButton */,
-				8D92C72519C419DD002B8428 /* YQPopoverController */,
 			);
 			path = BitcoinRewarding;
 			sourceTree = SOURCE_ROOT;
@@ -208,7 +208,8 @@
 				8D92C72819C419DD002B8428 /* YQStoryboardPopoverSegue.h */,
 				8D92C72919C419DD002B8428 /* YQStoryboardPopoverSegue.m */,
 			);
-			path = YQPopoverController;
+			name = YQPopoverController;
+			path = ../BitcoinRewarding/YQPopoverController;
 			sourceTree = "<group>";
 		};
 		8D92C72C19C419FA002B8428 /* YQButton */ = {
