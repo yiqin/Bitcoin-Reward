@@ -16,8 +16,7 @@
 #import "CBExchange.h"
 
 @interface ViewController ()
-@property UIView *headerView;
-@property UILabel *headerLabel;
+
 @property UIButton *rightButton;
 @property NSMutableArray *transactions;
 
@@ -37,35 +36,11 @@
     return self;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)viewDidLoad
 {
-    BOOL ios7 = ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0);
-    
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.transactions = [[NSMutableArray alloc] init];
-    
-    int headerHeight;
-    if (ios7) {
-        headerHeight = 70;
-    } else {
-        headerHeight = 50;
-    }
-    
-    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, headerHeight)];
-    [self.headerView setBackgroundColor:[UIColor colorWithRed:52/255.0f green:152/255.0f blue:219/255.0f alpha:1.0]];
-    self.headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, headerHeight - 50 + 14, 200, 22)];
-    [self.headerLabel setText:@"Coinbase"];
-    [self.headerLabel setTextAlignment:NSTextAlignmentCenter];
-    [self.headerLabel setBackgroundColor:[UIColor clearColor]];
-    [self.headerLabel setFont:[UIFont boldSystemFontOfSize:18.0]];
-    self.headerLabel.textColor = [UIColor whiteColor];
-    [self.headerView addSubview:self.headerLabel];
     
     
     self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake((320-70)*0.5, 300, 70, 50)];
@@ -74,8 +49,6 @@
     [self.rightButton addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
     self.rightButton.backgroundColor = [UIColor colorWithRed:52/255.0f green:152/255.0f blue:219/255.0f alpha:1.0];
     [self.view addSubview:self.rightButton];
-    
-    [self.view addSubview:self.headerView];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getAuthCode:) name:CB_AUTHCODE_NOTIFICATION_TYPE object:nil];
@@ -92,14 +65,42 @@
 {
     [super viewDidAppear:YES];
     
-    NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
+    [self auth];
 }
+
+// Get uers data. That's necessary to setup.
+- (void)auth
+{
+    if (![BRCoinbase isAuthenticated]) {
+        [BRCoinbase login:^(NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+                    self.account = account;
+                    [CBExchange getExchangeRates:^(NSDictionary *entries, NSError *error) {
+                        
+                    }];
+                    
+                    [self.account getTransactions:^(NSArray *transactions, NSError *error) {
+                        self.transactions = [transactions mutableCopy];
+                        
+                    }];
+                }];
+            }
+        }];
+    } else {
+        self.account = nil;
+        [self.transactions removeAllObjects];
+    }
+}
+
 
 - (void)test {
     
     // NSLog(@"Auth or not", [Coinbase isAuthenticated]);
     
-    // We don't use Authenticated here.
+    // We don't use Authenticated to fetch the information of account.
     NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
     
     if ([BRCoinbase isAuthenticated]) {
@@ -148,7 +149,7 @@
     
     // They are seperated.
     
-    [CBTransaction send:@0.002 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(CBTransaction *transaction, NSError *error) {
+    [CBTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(CBTransaction *transaction, NSError *error) {
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
         }
