@@ -38,7 +38,7 @@
         // 1
         [self.requestSerializer setValue:apiKey forHTTPHeaderField:@"ACCESS_KEY"];
         
-        NSString *body = @"";
+        NSString *body = nil;
         //2
         NSString *message = [NSString stringWithFormat:@"%@%@%@",nonce,url,body];
         
@@ -70,10 +70,12 @@
     const unsigned char *buffer = (const unsigned char *)[HMACData bytes];
     NSString *HMAC = [NSMutableString stringWithCapacity:HMACData.length * 2];
     
-    for (int i = 0; i < HMACData.length; ++i)
+    for (int i = 0; i < HMACData.length; ++i) {
         HMAC = [HMAC stringByAppendingFormat:@"%02lx", (unsigned long)buffer[i]];
+    }
     
     return HMAC;
+    
 }
 
 @end
