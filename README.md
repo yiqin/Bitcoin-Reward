@@ -21,3 +21,8 @@ Initialize API
     return YES;
 }
 ```
+
+Send Bitcoin
+```Objective-C
+    [BitcoinRewarding sendO2];
+```
