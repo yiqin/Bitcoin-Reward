@@ -31,5 +31,6 @@
 + (void)sendO2;
 + (void)sendO2WithBlock:(void(^)(BOOL succeeded, NSError *error))block;
 
++ (void)goToRewardingView;
 
 @end

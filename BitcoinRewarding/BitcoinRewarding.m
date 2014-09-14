@@ -8,6 +8,8 @@
 
 #import "BitcoinRewarding.h"
 
+#import "BRRewardingView.h"
+
 @interface BitcoinRewarding ()
 
 @property(nonatomic, strong) NSString *applicationId;
@@ -132,5 +134,16 @@
     
 }
 
++ (void)goToRewardingView
+{
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    BRRewardingView *rewardingPage = [[BRRewardingView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, screenRect.size.height)];
+    
+    rewardingPage.backgroundColor = [UIColor clearColor];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:rewardingPage];
+    
+}
 
 @end

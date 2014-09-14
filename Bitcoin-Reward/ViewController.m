@@ -123,6 +123,7 @@
     // Hey, this is one line code implementation.
     // [BitcoinRewarding sendO2];
     
+    /*
     [BitcoinRewarding sendO2WithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"Send bitcoin successfully.");
@@ -132,7 +133,9 @@
         }
         
     }];
+    */
     
+    [BitcoinRewarding goToRewardingView];
 }
 
 - (void)didReceiveMemoryWarning

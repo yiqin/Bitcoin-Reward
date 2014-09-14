@@ -48,6 +48,7 @@
 		8D92C7A619C4EF91002B8428 /* BRCoinbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C7A119C4EF91002B8428 /* BRCoinbase.m */; };
 		8D92C83519C4F3F5002B8428 /* NSData+NSHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C83219C4F3F5002B8428 /* NSData+NSHash.m */; };
 		8D92C83619C4F3F5002B8428 /* NSString+NSHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C83419C4F3F5002B8428 /* NSString+NSHash.m */; };
+		8D92C8FD19C541D6002B8428 /* BRRewardingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C8FC19C541D6002B8428 /* BRRewardingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		8D92C83219C4F3F5002B8428 /* NSData+NSHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NSHash.m"; sourceTree = "<group>"; };
 		8D92C83319C4F3F5002B8428 /* NSString+NSHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSHash.h"; sourceTree = "<group>"; };
 		8D92C83419C4F3F5002B8428 /* NSString+NSHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSHash.m"; sourceTree = "<group>"; };
+		8D92C8FB19C541D6002B8428 /* BRRewardingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRewardingView.h; sourceTree = "<group>"; };
+		8D92C8FC19C541D6002B8428 /* BRRewardingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRewardingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +250,8 @@
 				8D92C83019C4F3F5002B8428 /* NSHash */,
 				8D92C78219C46B20002B8428 /* BitcoinRewarding.h */,
 				8D92C78319C46B20002B8428 /* BitcoinRewarding.m */,
+				8D92C8FB19C541D6002B8428 /* BRRewardingView.h */,
+				8D92C8FC19C541D6002B8428 /* BRRewardingView.m */,
 				8D92C79819C4EF90002B8428 /* BRAccount.h */,
 				8D92C79919C4EF90002B8428 /* BRAccount.m */,
 				8D92C79A19C4EF91002B8428 /* BRExchange.h */,
@@ -475,6 +480,7 @@
 				8D92C6FC19C418EA002B8428 /* main.m in Sources */,
 				8D92C75019C46A1A002B8428 /* YQLabel.m in Sources */,
 				8D92C74B19C41A16002B8428 /* YQURLResponseSerialization.m in Sources */,
+				8D92C8FD19C541D6002B8428 /* BRRewardingView.m in Sources */,
 				8D92C77C19C46A22002B8428 /* YQParse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
