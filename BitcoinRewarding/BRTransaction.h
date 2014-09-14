@@ -1,5 +1,5 @@
 //
-//  CBTransaction.h
+//  BRTransaction.h
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBRequest.h"
+#import "BRRequest.h"
 
-@class CBTransaction;
+@class BRTransaction;
 
-typedef void (^TransactionHandler)(CBTransaction *transaction, NSError *error);
+typedef void (^TransactionHandler)(BRTransaction *transaction, NSError *error);
 typedef void (^RequestActionHandler)(BOOL success, NSError *error);
 
-@interface CBTransaction : NSObject
+@interface BRTransaction : NSObject
 @property NSString *name;
 @property NSString *email;
 @property NSString *amount;

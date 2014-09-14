@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBAccount.h"
+#import "BRAccount.h"
 
-FOUNDATION_EXPORT NSString *const CB_AUTHCODE_NOTIFICATION_TYPE;
-FOUNDATION_EXPORT NSString *const CB_AUTHCODE_URL_KEY;
+FOUNDATION_EXPORT NSString *const BR_AUTHCODE_NOTIFICATION_TYPE;
+FOUNDATION_EXPORT NSString *const BR_AUTHCODE_URL_KEY;
 
-typedef void (^AccountHandler)(CBAccount *account, NSError *error);
+typedef void (^AccountHandler)(BRAccount *account, NSError *error);
 typedef void (^LoginHandler)(NSError *error);
 
 @interface BRCoinbase : NSObject

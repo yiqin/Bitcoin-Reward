@@ -1,16 +1,16 @@
 //
-//  CBRequest.m
+//  BRRequest.m
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "CBRequest.h"
+#import "BRRequest.h"
 #import "BRCoinbase.h"
 
-@implementation CBRequest
-+ (void)authorizedRequest:(CBResponseHandler)handler {
+@implementation BRRequest
++ (void)authorizedRequest:(BRResponseHandler)handler {
     double currentTime = [[NSDate date] timeIntervalSince1970];
     double expiryTime = [[[NSUserDefaults standardUserDefaults] objectForKey:@"expiryTime"] doubleValue];
     if (currentTime >= expiryTime) {
@@ -37,7 +37,7 @@
     }
 }
 
-+ (void)getRequest:(NSString *)url withHandler:(CBResponseHandler)handler {
++ (void)getRequest:(NSString *)url withHandler:(BRResponseHandler)handler {
     YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
     manager.responseSerializer = [YQJSONResponseSerializer serializer];
     [manager GET:url parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {

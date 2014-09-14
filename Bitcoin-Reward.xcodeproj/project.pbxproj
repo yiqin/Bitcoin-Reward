@@ -41,10 +41,10 @@
 		8D92C78119C46A22002B8428 /* YQParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C77219C46A22002B8428 /* YQParseUser.m */; };
 		8D92C78419C46B20002B8428 /* BitcoinRewarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78319C46B20002B8428 /* BitcoinRewarding.m */; };
 		8D92C78719C4720A002B8428 /* BRHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */; };
-		8D92C7A219C4EF91002B8428 /* CBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79919C4EF90002B8428 /* CBAccount.m */; };
-		8D92C7A319C4EF91002B8428 /* CBExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79B19C4EF91002B8428 /* CBExchange.m */; };
-		8D92C7A419C4EF91002B8428 /* CBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79D19C4EF91002B8428 /* CBRequest.m */; };
-		8D92C7A519C4EF91002B8428 /* CBTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79F19C4EF91002B8428 /* CBTransaction.m */; };
+		8D92C7A219C4EF91002B8428 /* BRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79919C4EF90002B8428 /* BRAccount.m */; };
+		8D92C7A319C4EF91002B8428 /* BRExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79B19C4EF91002B8428 /* BRExchange.m */; };
+		8D92C7A419C4EF91002B8428 /* BRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79D19C4EF91002B8428 /* BRRequest.m */; };
+		8D92C7A519C4EF91002B8428 /* BRTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C79F19C4EF91002B8428 /* BRTransaction.m */; };
 		8D92C7A619C4EF91002B8428 /* BRCoinbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C7A119C4EF91002B8428 /* BRCoinbase.m */; };
 		8D92C82E19C4F3E9002B8428 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92C82C19C4F3E9002B8428 /* NSDate+TimeAgo.m */; };
 		8D92C82F19C4F3E9002B8428 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D92C82D19C4F3E9002B8428 /* NSDateTimeAgo.bundle */; };
@@ -157,14 +157,14 @@
 		8D92C78319C46B20002B8428 /* BitcoinRewarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitcoinRewarding.m; sourceTree = "<group>"; };
 		8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHTTPRequestOperationManager.h; sourceTree = "<group>"; };
 		8D92C78619C4720A002B8428 /* BRHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		8D92C79819C4EF90002B8428 /* CBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAccount.h; sourceTree = "<group>"; };
-		8D92C79919C4EF90002B8428 /* CBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAccount.m; sourceTree = "<group>"; };
-		8D92C79A19C4EF91002B8428 /* CBExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBExchange.h; sourceTree = "<group>"; };
-		8D92C79B19C4EF91002B8428 /* CBExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBExchange.m; sourceTree = "<group>"; };
-		8D92C79C19C4EF91002B8428 /* CBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequest.h; sourceTree = "<group>"; };
-		8D92C79D19C4EF91002B8428 /* CBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequest.m; sourceTree = "<group>"; };
-		8D92C79E19C4EF91002B8428 /* CBTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTransaction.h; sourceTree = "<group>"; };
-		8D92C79F19C4EF91002B8428 /* CBTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTransaction.m; sourceTree = "<group>"; };
+		8D92C79819C4EF90002B8428 /* BRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAccount.h; sourceTree = "<group>"; };
+		8D92C79919C4EF90002B8428 /* BRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAccount.m; sourceTree = "<group>"; };
+		8D92C79A19C4EF91002B8428 /* BRExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRExchange.h; sourceTree = "<group>"; };
+		8D92C79B19C4EF91002B8428 /* BRExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRExchange.m; sourceTree = "<group>"; };
+		8D92C79C19C4EF91002B8428 /* BRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequest.h; sourceTree = "<group>"; };
+		8D92C79D19C4EF91002B8428 /* BRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequest.m; sourceTree = "<group>"; };
+		8D92C79E19C4EF91002B8428 /* BRTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTransaction.h; sourceTree = "<group>"; };
+		8D92C79F19C4EF91002B8428 /* BRTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTransaction.m; sourceTree = "<group>"; };
 		8D92C7A019C4EF91002B8428 /* BRCoinbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRCoinbase.h; sourceTree = "<group>"; };
 		8D92C7A119C4EF91002B8428 /* BRCoinbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRCoinbase.m; sourceTree = "<group>"; };
 		8D92C82B19C4F3E9002B8428 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
@@ -348,14 +348,14 @@
 				8D92C72519C419DD002B8428 /* YQPopoverController */,
 				8D92C78219C46B20002B8428 /* BitcoinRewarding.h */,
 				8D92C78319C46B20002B8428 /* BitcoinRewarding.m */,
-				8D92C79819C4EF90002B8428 /* CBAccount.h */,
-				8D92C79919C4EF90002B8428 /* CBAccount.m */,
-				8D92C79A19C4EF91002B8428 /* CBExchange.h */,
-				8D92C79B19C4EF91002B8428 /* CBExchange.m */,
-				8D92C79C19C4EF91002B8428 /* CBRequest.h */,
-				8D92C79D19C4EF91002B8428 /* CBRequest.m */,
-				8D92C79E19C4EF91002B8428 /* CBTransaction.h */,
-				8D92C79F19C4EF91002B8428 /* CBTransaction.m */,
+				8D92C79819C4EF90002B8428 /* BRAccount.h */,
+				8D92C79919C4EF90002B8428 /* BRAccount.m */,
+				8D92C79A19C4EF91002B8428 /* BRExchange.h */,
+				8D92C79B19C4EF91002B8428 /* BRExchange.m */,
+				8D92C79C19C4EF91002B8428 /* BRRequest.h */,
+				8D92C79D19C4EF91002B8428 /* BRRequest.m */,
+				8D92C79E19C4EF91002B8428 /* BRTransaction.h */,
+				8D92C79F19C4EF91002B8428 /* BRTransaction.m */,
 				8D92C7A019C4EF91002B8428 /* BRCoinbase.h */,
 				8D92C7A119C4EF91002B8428 /* BRCoinbase.m */,
 				8D92C78519C4720A002B8428 /* BRHTTPRequestOperationManager.h */,
@@ -663,18 +663,18 @@
 				8D92C86D19C4F40B002B8428 /* UIViewController+SAMAdditions.m in Sources */,
 				8D92C86219C4F40B002B8428 /* NSString+SAMAdditions.m in Sources */,
 				8D92C7A619C4EF91002B8428 /* BRCoinbase.m in Sources */,
-				8D92C7A219C4EF91002B8428 /* CBAccount.m in Sources */,
+				8D92C7A219C4EF91002B8428 /* BRAccount.m in Sources */,
 				8D92C77D19C46A22002B8428 /* YQParseImgaeView.m in Sources */,
 				8D92C88E19C4F469002B8428 /* SDWebImageCompat.m in Sources */,
 				8D92C74A19C41A16002B8428 /* YQURLRequestSerialization.m in Sources */,
-				8D92C7A519C4EF91002B8428 /* CBTransaction.m in Sources */,
+				8D92C7A519C4EF91002B8428 /* BRTransaction.m in Sources */,
 				8D92C77E19C46A22002B8428 /* YQParseObject.m in Sources */,
 				8D92C88C19C4F469002B8428 /* NSData+ImageContentType.m in Sources */,
 				8D92C74919C41A16002B8428 /* YQURLConnectionOperation.m in Sources */,
 				8D92C89419C4F469002B8428 /* UIButton+WebCache.m in Sources */,
 				8D92C74819C41A16002B8428 /* YQSecurityPolicy.m in Sources */,
 				8D92C72F19C419FA002B8428 /* YQButton.m in Sources */,
-				8D92C7A419C4EF91002B8428 /* CBRequest.m in Sources */,
+				8D92C7A419C4EF91002B8428 /* BRRequest.m in Sources */,
 				8D92C74C19C41A16002B8428 /* YQURLSessionManager.m in Sources */,
 				8D92C78419C46B20002B8428 /* BitcoinRewarding.m in Sources */,
 				8D92C86319C4F40B002B8428 /* NSURL+SAMAdditions.m in Sources */,
@@ -685,7 +685,7 @@
 				8D92C83619C4F3F5002B8428 /* NSString+NSHash.m in Sources */,
 				8D92C70619C418EA002B8428 /* ViewController.m in Sources */,
 				8D92C86A19C4F40B002B8428 /* UIScreen+SAMAdditions.m in Sources */,
-				8D92C7A319C4EF91002B8428 /* CBExchange.m in Sources */,
+				8D92C7A319C4EF91002B8428 /* BRExchange.m in Sources */,
 				8D92C72A19C419DD002B8428 /* YQPopoverController.m in Sources */,
 				8D92C74619C41A16002B8428 /* YQHTTPSessionManager.m in Sources */,
 				8D92C86C19C4F40B002B8428 /* UIView+SAMAdditions.m in Sources */,

@@ -1,16 +1,16 @@
 //
-//  CBExchange.m
+//  BRExchange.m
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "CBExchange.h"
+#import "BRExchange.h"
 
-@implementation CBExchange
-+ (void)getTransfers:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+@implementation BRExchange
++ (void)getTransfers:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -28,7 +28,7 @@
 }
 
 + (void)getBuyPrice:(NSNumber*)qty withHandler:(PriceHandler)handler {
-    [CBRequest getRequest:@"https://coinbase.com/api/v1/prices/buy" withHandler:^(NSDictionary *result, NSError *error) {
+    [BRRequest getRequest:@"https://coinbase.com/api/v1/prices/buy" withHandler:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -38,7 +38,7 @@
 }
 
 + (void)getSellPrice:(NSNumber*)qty withHandler:(PriceHandler)handler {
-    [CBRequest getRequest:@"https://coinbase.com/api/v1/prices/sell" withHandler:^(NSDictionary *result, NSError *error) {
+    [BRRequest getRequest:@"https://coinbase.com/api/v1/prices/sell" withHandler:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -48,7 +48,7 @@
 }
 
 + (void)getSpotRate:(NSString *)currency withHandler:(PriceHandler)handler {
-    [CBRequest getRequest:[NSString stringWithFormat:@"https://coinbase.com/api/v1/prices/spot_rate?currency=%@",currency] withHandler:^(NSDictionary *result, NSError *error) {
+    [BRRequest getRequest:[NSString stringWithFormat:@"https://coinbase.com/api/v1/prices/spot_rate?currency=%@",currency] withHandler:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -57,8 +57,8 @@
     }];
 }
 
-+ (void)sellBitcoin:(NSNumber *)qty withHandler:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
++ (void)sellBitcoin:(NSNumber *)qty withHandler:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -78,8 +78,8 @@
     }];
 }
 
-+ (void)buyBitcoin:(NSNumber *)qty withHandler:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
++ (void)buyBitcoin:(NSNumber *)qty withHandler:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -99,14 +99,14 @@
     }];
 }
 
-+ (void)getExchangeRates:(CBResponseHandler)handler {
-    [CBRequest getRequest:@"https://coinbase.com/api/v1/currencies/exchange_rates" withHandler:^(NSDictionary *result, NSError *error) {
++ (void)getExchangeRates:(BRResponseHandler)handler {
+    [BRRequest getRequest:@"https://coinbase.com/api/v1/currencies/exchange_rates" withHandler:^(NSDictionary *result, NSError *error) {
         handler(result, error);
     }];
 }
 
 + (void)getSupportedCurrencies:(CurrenciesHandler)handler {
-    [CBRequest getRequest:@"https://coinbase.com/api/v1/currencies" withHandler:^(id result, NSError *error) {
+    [BRRequest getRequest:@"https://coinbase.com/api/v1/currencies" withHandler:^(id result, NSError *error) {
         handler(result, error);
     }];
 }

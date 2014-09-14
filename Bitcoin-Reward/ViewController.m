@@ -7,20 +7,20 @@
 //
 
 #import "ViewController.h"
-#import "CBTransaction.h"
+#import "BRTransaction.h"
 #import "NSString+NSHash.h"
 #import "NSDate+TimeAgo.h"
 #import "SAMCategories.h"
 #import "UIImageView+WebCache.h"
 #import "BRCoinbase.h"
-#import "CBExchange.h"
+#import "BRExchange.h"
 
 @interface ViewController ()
 
 @property UIButton *rightButton;
 @property NSMutableArray *transactions;
 
-@property CBAccount *account;
+@property BRAccount *account;
 @end
 
 #define PHOTO_TAG 1
@@ -51,14 +51,14 @@
     [self.view addSubview:self.rightButton];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getAuthCode:) name:CB_AUTHCODE_NOTIFICATION_TYPE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getAuthCode:) name:BR_AUTHCODE_NOTIFICATION_TYPE object:nil];
 }
 
 - (void)getAuthCode:(NSNotification *)notification
 {
-    NSLog(@"%@",[[notification userInfo] objectForKey:CB_AUTHCODE_URL_KEY]);
+    NSLog(@"%@",[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]);
     
-    [[UIApplication sharedApplication] openURL:[[notification userInfo] objectForKey:CB_AUTHCODE_URL_KEY]];
+    [[UIApplication sharedApplication] openURL:[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -76,9 +76,9 @@
             if (error) {
                 NSLog(@"%@", error);
             } else {
-                [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+                [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
                     self.account = account;
-                    [CBExchange getExchangeRates:^(NSDictionary *entries, NSError *error) {
+                    [BRExchange getExchangeRates:^(NSDictionary *entries, NSError *error) {
                         
                     }];
                     
@@ -124,21 +124,21 @@
         //            NSLog(@"%@", result);
         //        }];
         //
-        //        [CBExchange getTransfers:^(NSDictionary *result, NSError *error) {
+        //        [BRExchange getTransfers:^(NSDictionary *result, NSError *error) {
         //            NSLog(@"%@", result);
         //        }];
         
-        //        [CBTransaction request:@0.01 from:@"jbeal24@live.com" withNotes:@"CC" withHandler:^(CBTransaction *transaction, NSError *error) {
+        //        [BRTransaction request:@0.01 from:@"jbeal24@live.com" withNotes:@"CC" withHandler:^(BRTransaction *transaction, NSError *error) {
         //            __block NSString *tid = transaction.transactionId;
-        //            [CBTransaction resend:tid withHandler:^(BOOL success, NSError *error) {
+        //            [BRTransaction resend:tid withHandler:^(BOOL success, NSError *error) {
         //
-        //                [CBTransaction cancel:tid withHandler:^(BOOL success, NSError *error) {
+        //                [BRTransaction cancel:tid withHandler:^(BOOL success, NSError *error) {
         //
         //                }];
         //            }];
         //        }];
         
-        //        [CBExchange buyBitcoin:@0.01 withHandler:^(NSDictionary *result, NSError *error) {
+        //        [BRExchange buyBitcoin:@0.01 withHandler:^(NSDictionary *result, NSError *error) {
         //            NSLog(@"%@", result);
         //        }];
     }
@@ -146,26 +146,26 @@
     
     // They are seperated.
     
-    [CBTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(CBTransaction *transaction, NSError *error) {
+    [BRTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
         }
         
     }];
     
-    //    [CBExchange getBuyPriceForQty:@1 withHandler:^(NSString *price) {
+    //    [BRExchange getBuyPriceForQty:@1 withHandler:^(NSString *price) {
     //        NSLog(@"%@", price);
     //    }];
     //
-    //    [CBExchange getSellPriceForQty:@1 withHandler:^(NSString *price) {
+    //    [BRExchange getSellPriceForQty:@1 withHandler:^(NSString *price) {
     //        NSLog(@"%@", price);
     //    }];
     //
-    //    [CBExchange getSpotRateForCurrency:@"USD" withHandler:^(NSString *price) {
+    //    [BRExchange getSpotRateForCurrency:@"USD" withHandler:^(NSString *price) {
     //        NSLog(@"%@", price);
     //    }];
     
-    //    [CBExchange getSupportedCurrencies:^(NSDictionary *result, NSError *error) {
+    //    [BRExchange getSupportedCurrencies:^(NSDictionary *result, NSError *error) {
     //        NSLog(@"%@", result);
     //    }];
 }

@@ -1,5 +1,5 @@
 //
-//  CBExchange.h
+//  BRExchange.h
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
@@ -7,23 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CBRequest.h"
+#import "BRRequest.h"
 
 typedef void (^PriceHandler)(NSString *price, NSError *error);
 typedef void (^CurrenciesHandler)(NSArray* currencies, NSError *error);
 
-@interface CBExchange : NSObject
+@interface BRExchange : NSObject
 
-+ (void)getTransfers:(CBResponseHandler)handler;
++ (void)getTransfers:(BRResponseHandler)handler;
 
 + (void)getBuyPrice:(NSNumber*)qty withHandler:(PriceHandler)handler;
 + (void)getSellPrice:(NSNumber*)qty withHandler:(PriceHandler)handler;
 + (void)getSpotRate:(NSString *)currency withHandler:(PriceHandler)handler;
 
-+ (void)buyBitcoin:(NSNumber*)qty withHandler:(CBResponseHandler)handler;
-+ (void)sellBitcoin:(NSNumber*)qty withHandler:(CBResponseHandler)handler;
++ (void)buyBitcoin:(NSNumber*)qty withHandler:(BRResponseHandler)handler;
++ (void)sellBitcoin:(NSNumber*)qty withHandler:(BRResponseHandler)handler;
 
-+ (void)getExchangeRates:(CBResponseHandler)handler;
++ (void)getExchangeRates:(BRResponseHandler)handler;
 + (void)getSupportedCurrencies:(CurrenciesHandler)handler;
 
 @end

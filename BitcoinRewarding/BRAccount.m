@@ -1,17 +1,17 @@
 //
-//  CBAccount.m
+//  BRAccount.m
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "CBAccount.h"
+#import "BRAccount.h"
 
-@implementation CBAccount
+@implementation BRAccount
 
 - (void)getTransactions:(TransactionsHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -24,7 +24,7 @@
                 NSArray *array = [JSON objectForKey:@"transactions"];
                 for (NSDictionary *dict in array) {
                     NSDictionary *tDict = [dict objectForKey:@"transaction"];
-                    CBTransaction *transaction = [[CBTransaction alloc] init];
+                    BRTransaction *transaction = [[BRTransaction alloc] init];
                     transaction.amount = [[tDict objectForKey:@"amount"] objectForKey:@"amount"];
                     transaction.sender = [[[tDict objectForKey:@"sender"] objectForKey:@"email"] isEqualToString:self.email];
                     transaction.name = transaction.sender ? [[tDict objectForKey:@"recipient"] objectForKey:@"name"] : [[tDict objectForKey:@"sender"] objectForKey:@"name"];
@@ -50,8 +50,8 @@
     }];
 }
 
-- (void)getAccountChanges:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+- (void)getAccountChanges:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -70,7 +70,7 @@
 }
 
 - (void)getCurrentBalance:(BalanceHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -89,7 +89,7 @@
 }
 
 - (void)getReceiveAddress:(AddressHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -107,8 +107,8 @@
     }];
 }
 
-- (void)getAddresses:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+- (void)getAddresses:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -126,8 +126,8 @@
     }];
 }
 
-- (void)getContacts:(CBResponseHandler)handler {
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+- (void)getContacts:(BRResponseHandler)handler {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {

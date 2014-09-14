@@ -1,18 +1,18 @@
 //
-//  CBTransaction.m
+//  BRTransaction.m
 //  Bitcoin-Reward
 //
 //  Created by yiqin on 9/13/14.
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
-#import "CBTransaction.h"
+#import "BRTransaction.h"
 #import "BRCoinbase.h"
 
-@implementation CBTransaction
+@implementation BRTransaction
 
-+ (CBTransaction *)parseTransaction:(id)JSON forAccount:(CBAccount*)account {
-    CBTransaction *transaction = [[CBTransaction alloc] init];
++ (BRTransaction *)parseTransaction:(id)JSON forAccount:(BRAccount*)account {
+    BRTransaction *transaction = [[BRTransaction alloc] init];
     NSMutableDictionary *tDict = [JSON objectForKey:@"transaction"];
     transaction.amount = [[tDict objectForKey:@"amount"] objectForKey:@"amount"];
     transaction.sender = [[[tDict objectForKey:@"sender"] objectForKey:@"email"] isEqualToString:account.email];
@@ -31,11 +31,11 @@
 }
 
 + (void)send:(NSNumber*)amount to:(NSString*)address withNotes:(NSString*)notes withHandler:(TransactionHandler)handler {
-    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
-            [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+            [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
                 NSDictionary *params = @{@"transaction" : @{
                                                  @"to": address,
                                                  @"amount": amount,
@@ -56,11 +56,11 @@
 }
 
 + (void)request:(NSNumber*)amount from:(NSString*)address withNotes:(NSString*)notes withHandler:(TransactionHandler)handler {
-    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
-            [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+            [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
                 NSDictionary *params = @{@"transaction" : @{
                                                  @"from": address,
                                                  @"amount": amount,
@@ -83,11 +83,11 @@
 }
 
 + (void)resend:(NSString*)requestId withHandler:(RequestActionHandler)handler {
-    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
         if (error) {
             handler(NO, error);
         } else {
-            [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+            [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
                 YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
                 manager.requestSerializer = [YQJSONRequestSerializer serializer];
                 manager.responseSerializer = [YQJSONResponseSerializer serializer];
@@ -104,11 +104,11 @@
 }
 
 + (void)cancel:(NSString*)requestId withHandler:(RequestActionHandler)handler {
-    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
         if (error) {
             handler(NO, error);
         } else {
-            [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+            [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
                 YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
                 manager.requestSerializer = [YQJSONRequestSerializer serializer];
                 manager.responseSerializer = [YQJSONResponseSerializer serializer];
@@ -125,11 +125,11 @@
 }
 
 + (void)complete:(NSString*)requestId withHandler:(TransactionHandler)handler {
-    [BRCoinbase getAccount:^(CBAccount *account, NSError *error) {
+    [BRCoinbase getAccount:^(BRAccount *account, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
-            [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+            [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
                 YQHTTPRequestOperationManager *manager = [YQHTTPRequestOperationManager manager];
                 manager.requestSerializer = [YQJSONRequestSerializer serializer];
                 manager.responseSerializer = [YQJSONResponseSerializer serializer];

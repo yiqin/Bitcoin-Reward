@@ -7,10 +7,10 @@
 //
 
 #import "BRCoinbase.h"
-#import "CBRequest.h"
+#import "BRRequest.h"
 
-NSString *const CB_AUTHCODE_NOTIFICATION_TYPE = @"CB_AUTHCODE_NOTIFICATION";
-NSString *const CB_AUTHCODE_URL_KEY = @"CB_AUTHCODE_URL";
+NSString *const BR_AUTHCODE_NOTIFICATION_TYPE = @"BR_AUTHCODE_NOTIFICATION";
+NSString *const BR_AUTHCODE_URL_KEY = @"BR_AUTHCODE_URL";
 
 static BOOL isAuthenticated = NO;
 static NSString* _clientId;
@@ -131,7 +131,7 @@ static NSString *permissionsList;
 }
 
 + (void)getAuthCode:(NSString *)scope {
-    [[NSNotificationCenter defaultCenter] postNotificationName:CB_AUTHCODE_NOTIFICATION_TYPE object:nil userInfo:@{CB_AUTHCODE_URL_KEY:[NSURL URLWithString:[NSString stringWithFormat:@"https://coinbase.com/oauth/authorize?response_type=code&client_id=%@&redirect_uri=%@&scope=%@", [BRCoinbase getClientId], [BRCoinbase getCallbackUrl], scope]]}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:BR_AUTHCODE_NOTIFICATION_TYPE object:nil userInfo:@{BR_AUTHCODE_URL_KEY:[NSURL URLWithString:[NSString stringWithFormat:@"https://coinbase.com/oauth/authorize?response_type=code&client_id=%@&redirect_uri=%@&scope=%@", [BRCoinbase getClientId], [BRCoinbase getCallbackUrl], scope]]}];
     
     
 }
@@ -152,7 +152,7 @@ static NSString *permissionsList;
 + (void)getAccount:(AccountHandler)handler {
     
     
-    [CBRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
+    [BRRequest authorizedRequest:^(NSDictionary *result, NSError *error) {
         if (error) {
             handler(nil, error);
         } else {
@@ -160,7 +160,7 @@ static NSString *permissionsList;
             manager.responseSerializer = [YQJSONResponseSerializer serializer];
             [manager GET:[NSString stringWithFormat:@"https://coinbase.com/api/v1/users?access_token=%@", [self apiToken]] parameters:nil success:^(YQHTTPRequestOperation *operation, id JSON) {
 
-                CBAccount *account = [[CBAccount alloc] init];
+                BRAccount *account = [[BRAccount alloc] init];
                 account.name = [[[[JSON objectForKey:@"users"] objectAtIndex:0] objectForKey:@"user"] objectForKey:@"name"];
                 account.email = [[[[JSON objectForKey:@"users"] objectAtIndex:0] objectForKey:@"user"] objectForKey:@"email"];
                 account.balance = [[[[[JSON objectForKey:@"users"] objectAtIndex:0] objectForKey:@"user"] objectForKey:@"balance"] objectForKey:@"amount"];
