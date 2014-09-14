@@ -71,6 +71,8 @@
 // Get uers data. That's necessary to setup.
 - (void)auth
 {
+    NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
+    
     if (![BRCoinbase isAuthenticated]) {
         [BRCoinbase login:^(NSError *error) {
             if (error) {
@@ -98,7 +100,7 @@
 
 - (void)test
 {
-    [BRTransaction send:@0.0001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
+    [BRTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
         }
