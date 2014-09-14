@@ -121,6 +121,7 @@
             
             YQParseObject *newBitcoinSent = [YQParseObject objectWithClassName:@"BitcoinRewarding"];
             [newBitcoinSent setValue:[BitcoinRewarding getBitcoinUnit] forKey:@"bitcoinSent"];
+            [newBitcoinSent setValue:[BitcoinRewarding getMessage] forKey:@"message"];
             
             // [newPoint setValue:self.selectedPage forKey:@"belongTo"];
             
