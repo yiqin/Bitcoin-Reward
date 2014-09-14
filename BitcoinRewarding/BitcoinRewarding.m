@@ -68,6 +68,12 @@
     shared.message = message;
 }
 
++ (void)updateEmailAddress:(NSString *)emailAddress
+{
+    BitcoinRewarding *shared = [BitcoinRewarding sharedManager];
+    shared.emailAddress = emailAddress;
+}
+
 + (NSString*)getApplicationId
 {
     BitcoinRewarding *shared = [BitcoinRewarding sharedManager];

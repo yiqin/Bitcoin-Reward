@@ -14,11 +14,9 @@
 
 @property UIButton *rightButton;
 @property NSMutableArray *transactions;
-
 @property BRAccount *account;
-@end
 
-#define PHOTO_TAG 1
+@end
 
 @implementation ViewController
 
@@ -98,44 +96,15 @@
 
 - (void)test
 {
-    /*
-    [BRTransaction send:[BitcoinRewarding getBitcoinUnit] to:[BitcoinRewarding getEmailAddress] withNotes:[BitcoinRewarding getMessage] withHandler:^(BRTransaction *transaction, NSError *error) {
-        if (!error) {
-            NSLog(@"Send bitcoin successfully.");
-            
-            YQParseObject *newBitcoinSent = [YQParseObject objectWithClassName:@"BitcoinRewarding"];
-            [newBitcoinSent setValue:[BitcoinRewarding getBitcoinUnit] forKey:@"bitcoinSent"];
-            
-            // [newPoint setValue:self.selectedPage forKey:@"belongTo"];
-            
-            [newBitcoinSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                NSLog(@"objectId - %@", newBitcoinSent.objectId);
-                
-                
-            }];
-            
-            
-        }
-    }];
-     */
-    
-    
     // Hey, this is one line code implementation.
-    // [BitcoinRewarding sendO2];
+    [BitcoinRewarding sendO2];
     
     /*
     [BitcoinRewarding sendO2WithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Send bitcoin successfully.");
-            
-            
-            
-        }
-        
+     
     }];
     */
     
-    [BitcoinRewarding goToRewardingView];
 }
 
 - (void)didReceiveMemoryWarning

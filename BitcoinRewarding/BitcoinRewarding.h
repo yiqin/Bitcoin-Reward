@@ -21,6 +21,8 @@
             emailAddress:(NSString*)emailAddress
                  message:(NSString*)message;
 
++ (void)updateEmailAddress:(NSString*)emailAddress;
+
 + (NSString*)getApplicationId;
 + (NSString*)getApiKey;
 + (NSNumber*)getBitcoinUnit;
