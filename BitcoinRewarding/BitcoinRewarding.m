@@ -57,8 +57,8 @@
     [BRCoinbase setClientId:@"6b14b1df3e78c4f307d93a6a4cc27e831f075142b5c54e8948c4183e9f34fb19" clientSecret:@"ede9c978a65caf45fd0cfc46d1075f945f2e7b0dbf860fe65d81aa6e2950fa4d"];
     
     // Parse Authorization
-    [YQParse setApplicationId:@"puJq7igbK6ZeekBulDQP1aJfVwxcd1vvAWAshHPI"
-                   restApiKey:@"pkMzP4R37PZz4yd4vI7rswJHUxSm1oQesO4Fvhs7"];
+    [YQParse setApplicationId:applicationId
+                   restApiKey:apiKey];
     
     BitcoinRewarding *shared = [BitcoinRewarding sharedManager];
     shared.applicationId = applicationId;
@@ -97,5 +97,40 @@
     BitcoinRewarding *shared = [BitcoinRewarding sharedManager];
     return shared.message;
 }
+
++ (void)sendO2
+{
+    [self sendO2WithBlock:^(BOOL succeeded, NSError *error) {
+        
+    }];
+}
+
++ (void)sendO2WithBlock:(void(^)(BOOL succeeded, NSError *error))block
+{
+    [BRTransaction send:[BitcoinRewarding getBitcoinUnit] to:[BitcoinRewarding getEmailAddress] withNotes:[BitcoinRewarding getMessage] withHandler:^(BRTransaction *transaction, NSError *error) {
+        if (!error) {
+            NSLog(@"Send bitcoin successfully.");
+            
+            block(YES, nil);
+            
+            YQParseObject *newBitcoinSent = [YQParseObject objectWithClassName:@"BitcoinRewarding"];
+            [newBitcoinSent setValue:[BitcoinRewarding getBitcoinUnit] forKey:@"bitcoinSent"];
+            
+            // [newPoint setValue:self.selectedPage forKey:@"belongTo"];
+            
+            [newBitcoinSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                NSLog(@"objectId - %@", newBitcoinSent.objectId);
+                
+                
+            }];
+        }
+        else {
+            
+            block(NO, error);
+        }
+    }];
+    
+}
+
 
 @end

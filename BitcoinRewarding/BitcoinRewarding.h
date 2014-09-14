@@ -10,6 +10,7 @@
 
 #import "YQParse.h"
 #import "BRCoinbase.h"
+#import "BRTransaction.h"
 
 @interface BitcoinRewarding : NSObject
 
@@ -24,5 +25,10 @@
 + (NSNumber*)getBitcoinUnit;
 + (NSString*)getEmailAddress;
 + (NSString*)getMessage;
+
+
++ (void)sendO2;
++ (void)sendO2WithBlock:(void(^)(BOOL succeeded, NSError *error))block;
+
 
 @end

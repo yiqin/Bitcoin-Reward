@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bitcoin-Reward/ViewController.m"
-            timestampString = "432349047.818022"
+            filePath = "BitcoinRewarding/BitcoinRewarding.m"
+            timestampString = "432353233.860741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-test"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "+sendO2WithBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,43 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bitcoin-Reward/ViewController.m"
-            timestampString = "432349220.974819"
+            timestampString = "432353596.856973"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-auth"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-test"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController auth]"
-                  moduleName = "Bitcoin-Reward"
-                  urlString = "file:///Users/yiqin/Desktop/Bitcoin-Reward/Bitcoin-Reward/ViewController.m"
-                  timestampString = "432349220.980204"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__22-[ViewController auth]_block_invoke"
-                  moduleName = "Bitcoin-Reward"
-                  urlString = "file:///Users/yiqin/Desktop/Bitcoin-Reward/Bitcoin-Reward/ViewController.m"
-                  timestampString = "432349220.980625"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

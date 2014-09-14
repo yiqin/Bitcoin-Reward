@@ -53,6 +53,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getAuthCode:) name:BR_AUTHCODE_NOTIFICATION_TYPE object:nil];
 }
 
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    [self auth];
+}
+
 - (void)getAuthCode:(NSNotification *)notification
 {
     NSLog(@"%@",[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]);
@@ -61,12 +69,6 @@
     [[UIApplication sharedApplication] openURL:[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]];
 }
 
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:YES];
-    
-    [self auth];
-}
 
 // Get uers data. That's necessary to setup.
 - (void)auth
@@ -100,12 +102,41 @@
 
 - (void)test
 {
-    [BRTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
+    /*
+    [BRTransaction send:[BitcoinRewarding getBitcoinUnit] to:[BitcoinRewarding getEmailAddress] withNotes:[BitcoinRewarding getMessage] withHandler:^(BRTransaction *transaction, NSError *error) {
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
+            
+            YQParseObject *newBitcoinSent = [YQParseObject objectWithClassName:@"BitcoinRewarding"];
+            [newBitcoinSent setValue:[BitcoinRewarding getBitcoinUnit] forKey:@"bitcoinSent"];
+            
+            // [newPoint setValue:self.selectedPage forKey:@"belongTo"];
+            
+            [newBitcoinSent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                NSLog(@"objectId - %@", newBitcoinSent.objectId);
+                
+                
+            }];
+            
+            
+        }
+    }];
+     */
+    
+    
+    // Hey, this is one line code implementation.
+    // [BitcoinRewarding sendO2];
+    
+    [BitcoinRewarding sendO2WithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Send bitcoin successfully.");
+            
+            
+            
         }
         
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning
