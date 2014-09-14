@@ -48,6 +48,7 @@ static NSString *permissionsList;
 
 + (void)login:(LoginHandler)handler {
     
+    NSLog(@"First time login");
     
     // Manually input
     // fc265623f340091db47f7b5e6b1c09c11d8d9cff81ba3bbbf6c7a7b1c3d1a1f8

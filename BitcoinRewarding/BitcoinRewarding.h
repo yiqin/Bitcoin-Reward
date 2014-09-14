@@ -8,6 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+#import "YQParse.h"
+#import "BRCoinbase.h"
+
 @interface BitcoinRewarding : NSObject
+
++ (void)setApplicationId:(NSString*)applicationId
+                  apiKey:(NSString*)apiKey
+             bitcoinUnit:(NSNumber*)bitcoinUnit
+            emailAddress:(NSString*)emailAddress
+                 message:(NSString*)message;
+
++ (NSString*)getApplicationId;
++ (NSString*)getApiKey;
++ (NSNumber*)getBitcoinUnit;
++ (NSString*)getEmailAddress;
++ (NSString*)getMessage;
 
 @end

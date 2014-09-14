@@ -10,7 +10,7 @@
 
 #import "BRHTTPRequestOperationManager.h"
 
-#import "BRCoinbase.h"
+#import "BitcoinRewarding.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -82,7 +82,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [BRCoinbase setClientId:@"6b14b1df3e78c4f307d93a6a4cc27e831f075142b5c54e8948c4183e9f34fb19" clientSecret:@"ede9c978a65caf45fd0cfc46d1075f945f2e7b0dbf860fe65d81aa6e2950fa4d"];
+    
+    [BitcoinRewarding setApplicationId:nil apiKey:nil bitcoinUnit:@0.0001 emailAddress:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" message:@"Bitcoin Rewarding"];
+    
     
     return YES;
 }

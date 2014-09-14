@@ -9,11 +9,10 @@
 #import "ViewController.h"
 #import "BRTransaction.h"
 #import "NSString+NSHash.h"
-#import "NSDate+TimeAgo.h"
-#import "SAMCategories.h"
-#import "UIImageView+WebCache.h"
 #import "BRCoinbase.h"
 #import "BRExchange.h"
+
+#import "BitcoinRewarding.h"
 
 @interface ViewController ()
 
@@ -58,6 +57,7 @@
 {
     NSLog(@"%@",[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]);
     
+    // We need this url link when we login at the first time.
     [[UIApplication sharedApplication] openURL:[[notification userInfo] objectForKey:BR_AUTHCODE_URL_KEY]];
 }
 
@@ -96,78 +96,14 @@
 }
 
 
-- (void)test {
-    
-    // NSLog(@"Auth or not", [Coinbase isAuthenticated]);
-    
-    // We don't use Authenticated to fetch the information of account.
-    NSLog([BRCoinbase isAuthenticated] ? @"Yes" : @"No");
-    
-    if ([BRCoinbase isAuthenticated]) {
-        //        [self.account getAccountChanges:^(NSDictionary *result, NSError *error) {
-        //            NSLog(@"%@", result);
-        //        }];
-        //
-        //        [self.account getCurrentBalance:^(NSString *balance, NSError *error) {
-        //            NSLog(@"%@", balance);
-        //        }];
-        //
-        //        [self.account getReceiveAddress:^(NSString *address, NSError *error) {
-        //            NSLog(@"%@", address);
-        //        }];
-        //
-        //        [self.account getAddresses:^(NSDictionary *result, NSError *error) {
-        //            NSLog(@"%@", result);
-        //        }];
-        //
-        //        [self.account getContacts:^(NSDictionary *result, NSError *error) {
-        //            NSLog(@"%@", result);
-        //        }];
-        //
-        //        [BRExchange getTransfers:^(NSDictionary *result, NSError *error) {
-        //            NSLog(@"%@", result);
-        //        }];
-        
-        //        [BRTransaction request:@0.01 from:@"jbeal24@live.com" withNotes:@"CC" withHandler:^(BRTransaction *transaction, NSError *error) {
-        //            __block NSString *tid = transaction.transactionId;
-        //            [BRTransaction resend:tid withHandler:^(BOOL success, NSError *error) {
-        //
-        //                [BRTransaction cancel:tid withHandler:^(BOOL success, NSError *error) {
-        //
-        //                }];
-        //            }];
-        //        }];
-        
-        //        [BRExchange buyBitcoin:@0.01 withHandler:^(NSDictionary *result, NSError *error) {
-        //            NSLog(@"%@", result);
-        //        }];
-    }
-    
-    
-    // They are seperated.
-    
-    [BRTransaction send:@0.001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
+- (void)test
+{
+    [BRTransaction send:@0.0001 to:@"12aRtYy5QmxWMSWPEcMdEHGRazzg7bRGiN" withNotes:@"Hi" withHandler:^(BRTransaction *transaction, NSError *error) {
         if (!error) {
             NSLog(@"Send bitcoin successfully.");
         }
         
     }];
-    
-    //    [BRExchange getBuyPriceForQty:@1 withHandler:^(NSString *price) {
-    //        NSLog(@"%@", price);
-    //    }];
-    //
-    //    [BRExchange getSellPriceForQty:@1 withHandler:^(NSString *price) {
-    //        NSLog(@"%@", price);
-    //    }];
-    //
-    //    [BRExchange getSpotRateForCurrency:@"USD" withHandler:^(NSString *price) {
-    //        NSLog(@"%@", price);
-    //    }];
-    
-    //    [BRExchange getSupportedCurrencies:^(NSDictionary *result, NSError *error) {
-    //        NSLog(@"%@", result);
-    //    }];
 }
 
 - (void)didReceiveMemoryWarning

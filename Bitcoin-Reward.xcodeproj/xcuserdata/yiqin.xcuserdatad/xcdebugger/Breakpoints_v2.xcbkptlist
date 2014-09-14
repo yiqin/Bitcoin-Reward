@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitcoinRewarding/BRCoinbase.m"
-            timestampString = "432340379.683282"
+            filePath = "Bitcoin-Reward/ViewController.m"
+            timestampString = "432349047.818022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "+login:"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-test"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
