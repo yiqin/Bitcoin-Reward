@@ -11,6 +11,7 @@
 #import "YQParse.h"
 #import "BRCoinbase.h"
 #import "BRTransaction.h"
+#import "BRExchange.h"
 
 @interface BitcoinRewarding : NSObject
 

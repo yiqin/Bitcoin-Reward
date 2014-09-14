@@ -7,11 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
-#import "BRHTTPRequestOperationManager.h"
+#import "ViewController.h"
 
 #import "BitcoinRewarding.h"
-#import "ViewController.h"
 
 @implementation AppDelegate
 

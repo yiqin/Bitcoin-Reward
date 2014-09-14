@@ -7,10 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "BRTransaction.h"
-#import "NSString+NSHash.h"
-#import "BRCoinbase.h"
-#import "BRExchange.h"
 
 #import "BitcoinRewarding.h"
 
