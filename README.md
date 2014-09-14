@@ -23,6 +23,7 @@ Initialize API
 ```
 
 Send Bitcoin
+==============
 ```Objective-C
     [BitcoinRewarding sendO2];
 ```
