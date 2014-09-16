@@ -97,7 +97,23 @@
 - (void)test
 {
     // Hey, this is one line code implementation.
+    
+    
+    
+    
+    
+    
+    // O2 API , one line code impelemtation
     [BitcoinRewarding sendO2];
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     /*
     [BitcoinRewarding sendO2WithBlock:^(BOOL succeeded, NSError *error) {
